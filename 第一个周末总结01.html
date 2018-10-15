@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一个周末总结01</title>
+    <style>     
+    #a1:hover{
+        color:brown;
+    }
+    
+    
+    
+    </style>
+</head>
+<body  style="height:30000px;">
+    <!-- 竖标签 -->
+    <h1 style="color:brown; background: blue;" >1</h1>
+    <h1>2</h1>
+    <!-- 段落标签 -->
+    <p>段落</p>
+    <!-- ../调用上一级文件夹中的图片 -->
+<!-- 直接用图片文件名表示当前文件夹中的图片 -->
+<!-- 文件夹／图片 表示当前目录下文件下中图片 -->
+    <img width="200px" height="200px"   src="https://www.baidu.com/img/bd_logo1.png?where=super"
+    title="这是一张200*200的图片" alt="图片没加载出来"  >
+    <br>
+    <img width="200px" height="200px" src="ddd.jpg" >
+    <br>
+    <img width="200px" height="200px" src="html/IMG_1630.JPG" >
+    <br>
+    <img width="200px" height="200px" src="html/QWE/aaa.jpg" >
+    <br>
+    <a id="a1"  href="http://www.baidu.com"  target="_blank">baidu</a>
+
+    <!-- 有序标签 -->
+ 
+<!-- ul或者ol中间只能放li ，li中间可以放其他东西 -->
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<!-- 无序标签 -->
+<ol>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ol>
+
+<!-- 区块 用来布局 -->
+<div    style="color:brown;">red</div>
+<br>
+
+<span>
+    <strong>strong</strong>
+    
+</span>
+<br>
+<!-- 行级元素 同处一行 -->
+<span>
+span第一行      
+span第二行
+
+</span>
+
+<table  border="10" style="color: brown">
+<tr>
+    <td>1</td>
+    <td>2</td> 
+    <td>3</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+
+</table>
+
+<form action="">
+    <div>
+        <label for="aa">用户名</label>
+        <input id="aa"    type="text">
+        <br>
+        <label for="bb">密码</label>
+        <input type="text" id="bb">
+        <br>
+        <input type="radio" name="sex"  style="color:brown;" > 男
+        <input type="radio" name="sex" >   女
+        <br>    
+        <input type="checkbox"  name="color" style="color:crimson;" >红
+        <input type="checkbox"  name="color"    style="color:green;">绿色
+        <input type="checkbox"  name="color"  style="color:fuchsia;">粉色
+        <br>
+        <select >
+            <option value="">11</option>
+            <option value="">22</option>
+            <option value="">33</option> 
+            <option value="">44</option>
+        </select>
+        <!-- 文本域 -->
+        <textarea >这是一个文本域</textarea>
+        <button style="color:firebrick; background: darkorange;">普通按键</button>
+        <input type="submit" value="提交按钮">
+
+
+    </div>
+</form>
+<!-- 
+    行级元素:多个占一行，不能设置宽高。
+    a span  label   strong  b
+    块级元素：自己占一行可以设置宽高
+    h1 p ul ol div table
+    行级块元素： img input
+ -->
+
+
+
+
+
+
+ <!-- 内联样式 -->
+ <div  id="div1;" style="width:100px; height: 100px; background: firebrick;" >haha</div>
+
+</body>
+</html>
