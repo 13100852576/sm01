@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+
+#div1{  
+/* height:3001px;
+background:crimson  center center  no-repeat url(ddd.jpg); */
+
+height: 2000px;
+background-color: yellow;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+background-image: url(https://www.baidu.com/img/bd_logo1.png?where=super);
+}
+
+#div2{
+
+background: blue;
+text-align: center;
+height: 400px;
+line-height: 400px;
+
+
+
+}
+
+a{
+text-decoration: line-through;
+
+}
+a:link{
+
+color: blue;
+}
+
+a:visited{
+
+
+color: brown;
+}
+
+a:hover{
+
+
+
+color: black;
+}
+
+a:active{
+
+color: coral;
+
+
+}
+
+#div3{
+
+height: 3300px;
+
+font-family: 'Courier New', Courier, monospace;
+font-size: 90px;
+font-weight: 900;
+font-style: italic;
+cursor: crosshair;
+}
+
+ul{
+
+list-style: none;
+}
+
+
+</style>
+
+
+
+
+</head>
+
+<body>
+<!-- 竖标签 -->
+<h1 style="color:blue; background: crimson;">1</h1>
+<h1>2</h1>
+<!-- 段落标签 -->
+<p>段落标签</p>
+<!-- ../调用上一级文件夹中的图片 -->
+<!-- 直接用图片文件名表示当前文件夹中的图片 -->
+<!-- 文件夹／图片 表示当前目录下文件下中图片 -->
+<img src="https://www.baidu.com/img/bd_logo1.png?where=super" width="300;" height="300;" alt="加载失败;" title="这是一张图片;">
+<img src="ddd.jpg" title="内存中图片" width="300;" height="300;" >
+<img src="html/IMG_1630.JPG" width="300;" height="300;" alt="html中的图片">
+<img src="html/QWE/aaa.jpg" alt="QWE中的图片" width="300;">
+<a href="http://www.baidu.com" style="color:chartreuse;">百度</a>
+<!-- 有序标签 -->
+
+<!-- ul或者ol中间只能放li ，li中间可以放其他东西 -->
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+
+
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        
+<ol>
+
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ol>
+
+<div style="color:blueviolet;  background:darkgreen;">
+
+div
+
+</div>
+
+<span>
+<strong>strong</strong>
+</span>
+
+<span>
+
+span 
+</span>
+
+<table border="10" style="color:crimson;">
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+
+
+
+</tr>
+<tr>
+
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</table>
+<form action="">
+<div>
+
+<label for="aa">用户名</label>
+<input id="aa"   type="text">
+<br>
+<label for="bb">密码</label>
+<input type="password" id="bb">
+<br>
+<!-- 单选 -->
+<input type="radio" name="sex"  >男
+<input type="radio" name="sex">女
+<!-- 多选 -->
+<input type="checkbox" name="ball">volleball
+<input type="checkbox" name="ball">basketball
+<input type="checkbox" name="ball">football
+<input type="checkbox" name="ball">socerball
+
+</div>
+
+</form>
+<!-- 
+行级元素:多个占一行，不能设置宽高。
+a span  label   strong  b
+块级元素：自己占一行可以设置宽高
+h1 p ul ol div table
+行级块元素： img input
+-->
+<div id="div1"   >div1</div>
+
+<div id="div2">div3</div>
+<a href="http://www.taobao.com" target="_blank">TAOBAO</a>
+
+
+
+
+
+<div id="div3">div33333333333</div>
+
+
+
+
+
+
+</body>
+</html>
