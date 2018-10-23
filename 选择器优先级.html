@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+    
+    #div1{
+        background: red;
+}
+    #div1{
+        background: blue;
+    }
+    
+
+    #div0 .aa{
+        background: green;
+
+    }
+    /*  优先级数相加 */
+
+    /* .cc .bb{
+
+        background: pink;
+    } */
+
+
+.bb{
+
+ background: black;
+}
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div class="cc">
+    <div id="div1" class="aa">111</div>
+    <div id="div2" class="bb">2222</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+<!--属性后的 ！important 优先级最高 
+    style 最高 1000
+    id 100
+    class 伪类 10
+    标签、伪元素 ：：after    1    
+    参杂相加可以用 如id+id class+class不可用
+-->
+
+
+<!-- 选择器优先级相同情况下，下面的覆盖上面 -->
+<!-- 选择器是按照属性来的不是按照选择器来   在选择器中挑选属性 -->
