@@ -1,0 +1,124 @@
+#search-all{
+    width: 1230px;
+    margin: 0 auto;
+  position: relative;
+ 
+  z-index: 5;
+   
+}
+#logo{
+    float: left;
+    margin-left:-40px; 
+    
+}
+
+#search-box{
+
+    float: left;
+    margin-left:67px; 
+    margin-top: 37px;
+    overflow: hidden;
+    
+    
+    
+    
+}
+#search-button{
+background: #ff0036;
+color: aliceblue;
+float: left;
+height: 40px;
+width: 124px;
+border: #ff0036  solid 1px;
+margin-left:-5px; 
+font-size: 18px;
+ /* 文字之间的空隙 */
+ letter-spacing: 5px;
+ 
+
+
+}
+#input-box{
+
+    height:26px;
+    width: 483px;
+    border: 2px solid #ff0036;
+    float: left;
+    padding: 5px 3px 5px 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+#ad01{
+
+    position: absolute;
+    left: 317px;
+    top: 74px;
+    font-size: 14px;
+    
+    
+}
+#ad01 li a{
+
+    color:#999;
+}
+#ad01>li{
+    float: left;
+   margin-top: 10px;
+   padding-left:13px;
+   padding-right: 13px;
+   border-right: 1px  #999 solid;
+   line-height: 1.1;
+}
+#ad01 #adli01 {
+    padding-left:0;
+
+}
+#ad01 #adli09{
+    padding-right: 0;
+    border-right: none;
+}
+#ad01 .colorful>a{
+    color: #ff0036;
+}
+/* #div7 ul{
+    float: right;
+}
+#div7 li{
+float:left; 
+
+} */
+
+#div7{
+    width: 1980px;
+   
+    height: 35px;
+    line-height: 35px;
+    padding-left: 250px;
+    margin: 0 auto;
+    
+
+
+}
+#div7 img{
+    height: 30px;
+    width: 100px;
+    margin-top: 3px;
+    
+}
+
+
+#div7 a{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    float: left;
+    margin: 0 8px;
+    
+
+}
+#div7 a:hover{
+    color: #ff0036;
+}
+

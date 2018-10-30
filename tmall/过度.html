@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+
+    div{
+        height: 50px;
+        width: 30px;
+        background: red;
+        
+        
+     /* 属性 执行时间 运动方式 延迟时间 */        
+        transition: width  10s  ease 0;
+    }
+    body:hover div{
+
+        width: 900px;
+    }
+    #div1{
+        transition-timing-function: ease;
+    }
+    #div2{
+        transition-timing-function: ease-in;
+    }
+    #div3{
+        transition-timing-function: ease-in-out;
+
+    }
+    #div4{
+        transition-timing-function: linear;
+    }
+    #div5{
+        transition-timing-function: linear;
+    }
+</style>
+
+</head>
+<body>
+    
+
+
+
+    <div id="div5"> </div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</body>
+</html>

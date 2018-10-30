@@ -31,24 +31,28 @@
     height: 50px;
     width: 200px;
     background: blue;
-    float: left;
+    float: left; 
 }
 
-#div0::after{
-    content:"asdasdasdasdasdasdasdas";
-    display: block;
-    clear: both;
+/* #div0::after{
+    content:"div0div0div0div0div0";
+    display: block; 
+    clear: both; 
+} */
 
+
+#div4{
+clear: both;
 
 
 }
-
 </style>
 </head>
 <body>
     <div id="div0">
     <div id="div1">111</div>
     <div id="div2">222</div>
+    <div id="div4">444</div>
     <!-- <div id="div3">333</div> -->
 </div>
 <!-- 
@@ -58,8 +62,10 @@
     解决塌陷
     1.overfollow：hidden  父元素加
     2.给父元素设置高度
+    如果一个元素要浮动，那么它的祖先元素一定要有高度。
+    有高度的盒子，才能关住浮动。（记住这句过来人的经验之语）
     3.浮动元素下加一个兄弟元素(块元素) clear:both
-    4.clearfix ::after伪元素 块级 clear：both
+    4.父元素::after  是一个伪元素为块元素 clear：both
 
 
 
