@@ -17,7 +17,7 @@ list-style: none;
 
 text-align: center;
 background:#f6def5;
-margin-bottom: 3px;
+/* margin-bottom: 3px; */
 }
 .banner img{
 display: block;
@@ -69,34 +69,27 @@ padding-left: 20px;
 body{
 font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
 
+
 }
 #div4 a:hover{
 color: #FF0036;
-
-
 }
-
 
 a{
-
 text-decoration: none;
 }
+
 #div5{
-
-
 }
 
 #div6{
-
 float: right;
 }
 #div4{
-
 float: left;
 }
 
-#div6 li{
-
+#div6>li{
 float: left;
 height: 40px;
 line-height:40px;
@@ -104,11 +97,11 @@ padding: 0 10px 0 10px;
 
 color: #999;
 }
-#div6 li a:hover{
+#div6>li #a002:hover{
 color: #FF0036;
 }
 
-#div6 a{
+#div6>li>a{
 display: block;
 padding: 0 10px 0 10px;
 
@@ -155,12 +148,7 @@ transform-origin: 50% 25%;
 
 }
 
-
-
-
-
-
-#div6 li a{
+#div6 >li>a{
 color: #999;
 
 }
@@ -203,6 +191,7 @@ text-decoration: underline;
    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
     display: none;
     z-index: 8;
+    background: white;
 }
 #phone{
     position: relative;
@@ -222,10 +211,192 @@ text-decoration: underline;
     margin-left: -4px;
    
     }
-
-
     #phone:hover #phone-photo{
 
         display: block;
     }
+    .boss{
 
+        display: none;
+        background: white;
+        width: 200px;
+        position: absolute;
+        right: 0;
+        box-shadow: 0  2px 4px 0 rgba(0, 0, 0, 0.3);
+        z-index: 7;
+        }       
+    .boss h1{
+        color: #999;
+    }
+    .boss   a{
+        color: #999;
+    }
+    #shangjiazhichi{
+        position: relative;
+    }
+    #boss1 a{
+        display: inline;
+        font-size: 12px;
+        padding: 0;
+         margin: 18px;
+        line-height: 10px;
+
+    }
+#shangjia{
+font-size: 12px;
+margin-left: 8%;
+margin-top: 4px;
+        
+}
+#sub-shangjia{
+margin-top: -22px;
+margin-left: -3px;
+}
+#boss2 span{
+    margin-left: 19px;
+}
+#boss2 #help1{
+    display:inline;
+}
+#boss2  #help2{
+    display: inline;
+}
+.help{
+    margin-left: 26px;
+}
+#shangjiazhichi:hover .boss{
+    display:block;
+}
+#bossid a:hover{
+    color: #FF0036;
+    text-decoration: underline;
+}
+
+
+/* #sub-webgps{
+
+width: 957px; 
+height: 130px;
+background: red;
+position: absolute;
+z-index: 10;
+left: -845px;
+}
+#sub-webgps1{
+
+    background: #FF0036;
+    height: 110px;
+    width: 445px;
+}
+#sub-webgps2{
+    background: green;
+    height: 110px;
+    width: 445px;
+}
+#sub-webgps3{
+    background:yellow;
+    height: 110px;
+}
+#webgps{
+
+    position: relative;
+}
+#sub-webgps h1{
+
+    display: inline;
+    font-size: 12px;
+}
+#sub-webgps1 ul a{
+    margin: -19px;
+}
+#sub-webgps1 ul a{
+    margin-right: 0px;
+} */
+
+#sub-webgps{
+    display: none;
+    width: 960px; 
+    height: 130px;
+    background: white;
+    position: absolute;
+    z-index: 10;
+    left: -906px;
+    border: 1px solid #eee;
+    border-top: none;
+    padding: 25px;
+
+    }
+    #sub-webgps h2{
+    display: inline;
+    }
+    #webgps:hover #sub-webgps{
+        display: block;}
+    /* #sub-webgps ul{
+        display: inline;
+    }
+    #sub-webgps li{
+        display: inline;
+    } */
+    #sub-webgps1{
+
+    
+       height: 130px;
+       width: 387px;
+       float: left;
+       border-right:1px solid  #999;
+        
+    }
+    #sub-webgps2{
+       
+       height: 130px;
+       width: 387px;
+        float: left;
+        border-right:1px solid  #999;
+    }
+    #sub-webgps3{
+       
+        height: 130px;
+        width: 183px;
+       float: left;
+    }
+   
+     #webgps #sub-webgps li{
+        float: left;
+        
+       
+       }
+   
+    #sub-webgps a{
+        color:black;
+    margin: 0 12px; 
+        }
+    #sub-webgps ul{
+        
+        line-height: 30px;
+    }
+
+    #sub-webgps2 a{
+
+        margin:0 24px;
+    }
+    
+    #sub-webgps a:hover{
+
+        color: #FF0036;
+        text-decoration: underline;
+        }
+    .h01{
+
+        margin-left: 10px;
+    }
+    #idh01{
+        margin-left: 22px;
+    }
+
+    #sub-buy>a{
+         margin-left: 10px;
+         color: #999;
+    }
+    #sub-buy>a:hover{
+        color: #FF0036;
+    }

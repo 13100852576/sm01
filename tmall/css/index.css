@@ -8,7 +8,7 @@
 }
 #logo{
     float: left;
-    margin-left:-40px; 
+    margin-left:-44px; 
     
 }
 
@@ -90,13 +90,13 @@ float:left;
 } */
 
 #div7{
-    width: 1980px;
+    width: 980px;
    
     height: 35px;
-    line-height: 35px;
+    line-height:35px;
     padding-left: 250px;
     margin: 0 auto;
-    
+    border-bottom: 2px solid #ff0036;
 
 
 }
@@ -122,3 +122,495 @@ float:left;
     color: #ff0036;
 }
 
+
+
+#main-box{
+
+    height: 2000px;
+    background: url(../image/bg副本.jpg) center -270px no-repeat;
+
+}
+#center-box{
+        background:white;
+        height: 537px;
+        width: 1230px;
+        margin:  0 auto;
+        /* position: relative; */
+}
+
+#ad-list{
+    width: 200px;
+    height: 500px;
+    position: absolute;
+    top: 253px;
+    z-index: 10;
+    
+    /* position: absolute;
+    top: -38px; */
+    
+}
+#ul01li>a{
+
+    color: aliceblue;
+    font-size: 14px;
+
+}
+#goods{
+
+    height: 36px;
+    /* line-height: 36px; */
+    background: #ff002d;
+    width: 197px;
+    padding: 3px 2px;
+}
+#goods>h1{
+
+    font-size: 16px;
+    color: aliceblue;
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: 700;
+    margin-top: 7px;
+}
+#igoods{
+    padding: 0 0;
+    margin-top:10px;
+    margin-right: 10px;
+}
+
+#ul01{
+    background: rgba(0,0,0,0.55);
+    height: 538px;
+    
+}
+#ul01>li{
+
+    height: 31px;
+    line-height: 31px;
+    padding: 0 8px;
+
+}
+#ul01 i{
+    color: aliceblue;
+   margin-left: 2px;
+   margin-right: 13px;
+   font-size: 18px;
+   
+}
+#ul01>li:hover  >a{
+    color: #ff002d;
+}
+#ul01>li:hover  >i{
+    color: #ff002d;
+}
+#ul01>li:hover{
+    background: white;
+}
+
+#ad-list #li01:hover >a{
+
+color:green;
+}
+
+#ad-list #li01:hover >i{
+
+    color:green;
+    }
+
+    #ad-list #li05:hover >a{
+
+        color: blueviolet;
+        }
+        
+        #ad-list #li05:hover >i{
+        
+            color: blueviolet;
+            }
+            #ad-list #li09:hover >a{
+
+                color: blueviolet;
+                }
+                
+                #ad-list #li09:hover >i{
+                
+                    color: blueviolet;
+                    }
+                    #ad-list #li04:hover >a{
+
+                        color:green;
+                        }
+                        
+                        #ad-list #li04:hover >i{
+                        
+                            color:green;
+                            }
+                            #ad-list #li11:hover >a{
+
+                                color: darksalmon;
+                                }
+                                
+                                #ad-list #li11:hover >i{
+                                
+                                    color: darksalmon;
+
+                                    }
+
+                                    #ad-list #li14:hover >a{
+
+                                        color: deeppink;
+                                        }
+                                        
+                                        #ad-list #li14:hover >i{
+                                        
+                                            color: deeppink;
+                                            }    
+                                            #ad-list #li07:hover >a{
+
+                                                color: deeppink;
+                                                }
+                                                
+                                                #ad-list #li07:hover >i{
+                                                
+                                                    color: deeppink;
+                                                    }          
+                                                    #ad-list #li08:hover >a{
+
+                                                        color: purple;
+                                                        }
+                                                        
+                                                        #ad-list #li08:hover >i{
+                                                        
+                                                            color: purple;
+                                                            }   
+                        
+                            #ul01>li>.li01-div1{
+                            width: 871px;
+                            height: 536px;
+                            background:white;
+                            position: absolute;
+                            top: 0px;
+                            left: 200px;
+                            display: none;
+                        }
+
+                        #ul01 li:hover  .li01-div1{
+                            display: block;
+                        }
+
+                        #ul01{
+                            position:relative;
+
+                        }
+                    .div0001{
+                        width: 630px;
+                        height: 538px;
+                        
+                        float: left;
+                    }
+                                           
+                    .div0002{
+                        width: 241px;
+                        height: 537px;
+                        background: #f5f5f5;
+                        float: right;
+                    }
+                    .div00001-1{
+                        
+                        width: 630px;
+                        height: 70px;
+                        background: white;
+
+                    }
+                    .span-left{
+                     
+                        width: 100px;
+                        height: 70px;
+                        float: left;
+                        color: #333;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        margin-top: 5px;
+                        margin-top: 2px;
+                        margin-left: 40px;
+                                }
+                    .ul-right ul{
+                        
+                        width: 450px;
+                        height:60px;
+                        float: right;    
+                    }
+               
+                    .ul-right li a{
+                        float: left;
+                        color: #666;
+                        font-size:14px;
+                        margin-right:13px;
+                        line-height: 25px;
+                    }
+                    .ul-right ul{
+
+                        
+                        border-bottom:1px dashed rgba(0,0,0,.1);
+                    }
+                   .ul-right{
+                       padding: 0 40px;
+                       margin:  15px 0;
+                   }
+                   #ul01>li>a{
+                       color: white;
+                    }
+                    #ul01>li>i{
+                        color: black;
+                    }
+                .lunbotu-img img{
+                    height: 537px;
+                     width: 1230px;
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                    }
+                .lunbotu{
+                    position: relative;
+                    height: 537px;
+                    width: 1230px;
+                
+                }
+                .lunbotu-botton{
+                
+                background: #ff0036;
+                position: absolute;
+                /* width: 200px; */
+                bottom: 50px;
+                left: 50%;
+                transform: translate(-50%);
+                }
+                .lunbotu-botton li{
+                    float: left;
+                    margin-right: 20px;
+                }
+
+                .centerbox{
+                    height: 370px;
+                    width: 1230px;
+                   
+                    margin: 0 auto;
+                }
+             .pinpaishangou1{
+
+                background: white;
+                width: 234px;
+                height: 370px;;
+                float: left;
+             }
+             .pinpaishangou-img img{
+            width: 234px;
+            height: 316px; 
+            }
+            .pinpaishangou-title{
+                width: 234px;
+                height: 54px;
+                position: relative;
+                
+                 
+            }
+            .pinpaishangou-title-span01{
+                font-size: 18px;
+            color: #333;
+            font-weight: 700;
+            margin-right:10px;
+
+            }
+            .pinpaishangou-title-span02{
+                font-size: 18px;
+            color: #333;
+            font-weight: 700;
+            }
+            .pinpaishangou-title>a{
+                position: absolute;
+                left: 85%;
+                top: 34%;
+            }
+            .pinpaishangou-title>a>img{
+                width: 20px;
+                height: 20px;
+            }
+            .pinpaishangou {
+                margin-top: 25px;
+            }
+          
+            .pinpaishangou-title-span-span{
+                margin-left: 20px;
+                line-height: 54px;
+            }
+            .pinpaishangou02{
+             width: 480px;
+             height: 370px;
+             margin-left: 18px;
+            }
+            .pinpaishangou02 .pinpaishangou-title{
+                width: 480px;
+                height: 54px;
+            }
+            .pinpaishangou02 .pinpaishangou-img img{
+                width: 480px;
+                height: 316px;
+            }
+
+            .pinpaishangou03{
+                width: 480px;
+                height: 370px;
+                margin-left: 18px;
+               }
+               .pinpaishangou03 .pinpaishangou-title{
+                   width: 480px;
+                   height: 54px;
+               }
+               .pinpaishangou03 .pinpaishangou-img img{
+                   width: 480px;
+                   height: 316px;
+               }
+               .pinpaishangou-img:hover{
+                opacity: 0.5;
+               }
+               .pinpaishangou03 .pinpaishangou-title>a{
+                
+                left: 92%;
+                
+            }
+            .pinpaishangou02 .pinpaishangou-title>a{
+                
+                left: 92%;
+                
+            }
+            .small-box{
+               background:white;
+               width: 1230px;
+                margin: 0 auto;
+               margin-top:25px;
+               overflow: hidden;  
+            }
+            .small-box-1{
+            
+            width: 153.75px;
+            height: 153.75px;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            }
+            .small-box-1 img{
+            
+            width: 80%;
+            height: 50%;
+            display: block;
+            margin:  40px auto;
+
+            }
+            .small-box-1-1{
+                background:rgba(0,0,0,0.8);
+                 width: 100%;
+                 height: 100%;
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 text-align: center;
+                 opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .small-box-1-p{
+            color: white;
+            
+            }
+            .small-box-1-1p{
+                margin-top: 63px;
+            }
+            .small-box-1-2p{
+                width: 63px;
+                height: 18px;
+                display: inline-block;
+                background: #ff002d;
+                border-radius: 9px;
+                margin-top: 10px;
+                padding-bottom: 3px;
+                
+            }
+
+            .small-box-1:hover .small-box-1-1{
+                opacity: 1;
+            }
+           .small-box-1{
+               float: left;
+               /* border: #999 solid 1px; */
+               box-shadow: 0 0 1px 0 rgba(0,0,0,.1); 
+           }
+           .div0002-img{
+               width: 190px;;
+               height: 380px;
+               background:white;
+               position: absolute;
+               left:26px;
+               top: 10px;
+           }
+           .div0002{
+
+            position: relative;
+           }
+           .div0002-img-sub{
+               display: inline-block;
+               float: left;
+               width: 95px;
+               height: 47.5px;
+               box-shadow:  0 0 1px 0 rgba(0,0,0,.1);
+               
+
+           }
+           .div0002-img-sub img{
+            width: 95px;
+            height: 47.5px;
+           }
+
+           
+           .div0002-img-bigger{
+               height: 85px;
+               width: 190px;
+               box-shadow:  0 0 1px 0 rgba(0,0,0,.1);
+               position: absolute;
+               bottom: 30px;
+               left: 26px;
+           }
+           
+           .div0002-img-bigger img{
+            height: 85px;
+            width: 190px;
+           }
+           .li01-div1 a:hover{
+            color: #ff0036;
+           }
+           .sub-list{
+               z-index: 10;
+               background: white;
+               position: absolute;
+               width: 80px;
+               left: 0px;
+               text-align: center;
+               border:1px solid #eee; 
+               border-top: none;
+               display: none;
+               
+            }
+            #sub-list-a a{
+           
+                color:#666 ;
+            }
+            
+            #sub-list-a a:hover{
+            text-decoration: underline;
+            color: #ff0036;
+            
+            }
+            .li1:hover .sub-list{
+
+                display: block;
+            }
+           
