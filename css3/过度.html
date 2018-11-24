@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            height: 300px;
+            width: 300px;
+            background: red;
+            /* 要有触发条件 此题为hover */
+            /* transition: width   2s ease 0s ; */
+            animation:  run 2s ease 2s  infinite forwards;
+            
+            /* 动画名 时间 运动方式 延迟时间 执行次数（infinite无限循环） 保持最终状态 */
+            /* 不需要触发自动执行 */
+        }
+
+
+        @keyframes run {
+            0%{
+
+            }
+            30%{
+                width: 500px;
+            }
+            70%{
+                width: 300px;;
+            }
+            100%{
+                width: 800px;
+            }
+
+        }
+
+       
+        /* #div1:hover{
+            width: 800px;;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+   
+    #circle div{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+    }
+    #circle div:nth-child(1){
+    border:  10px   solid   blue; 
+   }
+   #circle div:nth-child(2){
+    border:  10px   solid  black; 
+    left: 230px;
+    position: absolute; 
+   }
+   #circle div:nth-child(3){
+    border:  10px   solid  red; 
+    left: 460px;
+    }
+    #circle div:nth-child(4){
+    border:  10px   solid   yellow; 
+    top: 110px;
+    left: 110px;
+    }
+    #circle div:nth-child(5){
+    border:  10px   solid   green; 
+    top: 110px;
+    left: 360px;
+    }
+    #circle div::after{
+        content: '';
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    #circle div:nth-child(1)::after{
+        border:  10px solid blue;
+        z-index: 1;
+        border-bottom-color: transparent;
+
+    }
+    #circle div:nth-child(2)::after{
+        border:  10px solid black;
+        z-index: 1;
+        border-left-color: transparent;
+
+
+    }
+    #circle div:nth-child(3)::after{
+        border:  10px solid red;
+        z-index: 1;
+        border-left-color: transparent;
+
+
+
+    }
+    /* #circle div:nth-child(4)::after{
+        border:  10px solid yellow;
+
+    } */
+    #circle div:nth-child(5)::after{
+        border: 10px solid  green;
+        z-index: 1;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        
+        
+    }
+  
+    </style>
+</head>
+<body>
+    <div id="circle">
+    <div id="blue"></div>
+    <div id="black"></div>
+    <div id="red"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+</div>
+
+</body>
+</html>

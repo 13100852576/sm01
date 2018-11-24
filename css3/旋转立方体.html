@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+    html,body{
+
+        height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            perspective: 800px;
+
+        }
+        #div0{
+            height: 300px;
+            width: 300px;
+            /* background: red; */
+            position: relative;
+            transform-style: preserve-3d;
+            animation: run 3s ease infinite ;
+            }
+            @keyframes run{
+
+                0%{
+
+                }
+                100%{
+                    transform: rotateY(360deg);
+                }
+
+            }
+        #div0 div{
+            font-size: 80px;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 300px;
+            border-radius: 10px;
+
+             background: rgba(255,255,255,0.1);
+                }
+                #div1{
+                            transform: rotateX(90deg)  translateZ(150px);
+                    }
+                #div3{
+
+                    transform: rotateX(-90deg) translateZ(150px);
+                }
+                #div2{
+
+                        transform: rotateY(90deg) translateZ(150px);
+
+                }
+                #div4{
+                     transform: rotateY(-90deg) translateZ(150px);
+
+                }
+                #div5{
+                    transform: rotateY(180deg) translateZ(150px);
+                }
+                #div6{
+                    transform: translateZ(150px);
+                }
+    </style>
+</head>
+<body>
+    
+<div id="div0">
+
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+    <div id="div5">5</div>
+    <div id="div6">6</div>
+</div>
+
+
+</body>
+</html>

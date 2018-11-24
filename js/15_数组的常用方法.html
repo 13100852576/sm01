@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //  concat  连接两个或更多的数组，并返回结果。 返回新的数组
+    // var a1=[1,2,3];
+    // var a2=[4,5,6];
+    // var a3=a1.concat(a2);
+    // alert(a3);
+
+
+    
+     //join  把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。 返回字符串
+    // var a4=[1,2,3,4,];
+    // alert(a4.join('+'));
+    
+    
+    
+    //pop 方法用于删除并返回数组的最后一个元素。 修改原数组
+    //shift()  删除并返回数组的第一个元素  修改原数组
+    // var a5=[1,2,3,4,5];
+    // alert(a5.pop());
+    // alert(a5.shift());
+
+
+    //push  方法可向数组的末尾添加一个或多个元素，并返回新的长度。 修改原数组
+    // var a6=[1,2,3,4,5];
+    // alert(a6.push(8));
+    // alert(a6);
+
+    
+    
+     // reverse() 方法用于颠倒数组中元素的顺序 该方法会改变原来的数组  返回原数组
+    // var a7=[1,2,3,4,5,6,7];
+    // a7.reverse();
+    // alert(a7);
+    
+    
+    
+    //slice() 方法可从已有的数组中返回选定的元素。 返回一个新的数组，包含从 start 到 end （不包括该元素   区间为左开右闭）的 arrayObject 中的元素。
+        // var a8=[1,2,3,4,5,6];
+        // var a9=a8.slice(2,4);
+        // alert(a9);
+
+
+
+         //sort() 方法用于对数组的元素进行排序。 数组在原数组上进行排序 默认是按照数字的顺序而不是大小进行排序
+        // var a10=[1,2,3,4,5,611,12,33,11];
+        // alert(a10.sort());
+
+        // 从小到大排列
+        // var a11=[1,2,3,4,5,6];
+        // var a12=a11.sort(
+        //     function(a,b){
+        //         return a-b;
+        //     }
+        // );
+        // alert(a12);
+
+        
+        // 从大到小排列
+        // var a13=[1,2,3,4,5,6,7,8];
+        // var a14=a13.sort(
+        //         function(a,b){
+        //             return b-a;
+        //         }
+        // );
+        // alert(a14);
+    
+        
+        // 从某个指定的位置向数组中   删除或者添加项目
+        // index	必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+        // howmany	必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+        // item1, ..., itemX	可选。向数组添加的新项目。
+
+        // 在第三个元素开始删除两个元素，无添加
+        // var a15=[1,2,3,4,5,6,7,8];
+        // alert(a15.splice(2,2));
+        // alert( a15);
+
+        // 在第一个元素开始删除一个元素并且添加100至原位置
+        // var a16=[1,2,3,4,5,6,7,8];
+        // alert(a16.splice(0,1,100));
+        // alert(a16);
+
+        // 在第一个元素位置添加元素10000
+        // var a17=[1,2,3,4,5,6,7,7,8];
+        // a17.splice(0,0,1000);
+        // alert(a17);
+        
+
+
+    
+    
+    
+    </script>
+</body>
+</html>

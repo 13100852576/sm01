@@ -6,43 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 <style>
-
+    body{
+        height: 3000px;
+    }
 /* #div1{
-height: 200px;
-width: 200px;
-border: red 10px solid;
-border-radius: 50%;
-border-top-color: black;
-border-left-color:green;
-border-right-color:gold;
-border-bottom-color: deeppink;
+    padding: 20px;
+    width: 800px;
+    height: 800px;
+    background:  url(../tmall/image/lunbo6.jpg) no-repeat;
+    border: 20px dashed black;
+    -webkit-background-attachment: scroll;
+    -webkit-background-origin:content-box; 
+    -webkit-background-clip:text;
+    font-size: 130px;
+    -webkit-text-fill-color: transparent;
+} */
+
+#div1{
+    padding: 20px;
+    width: 800px;
+    height: 800px;
+    background:  url(../tmall/image/lunbo6.jpg) no-repeat;
+    border: 20px dashed black;
+   
+   background-origin: content-box;
+   /* background-clip: content-box; */
 }
 
 
-
-#div3{
-    height: 800px;
-    width: 800px;
-    background-color: red;
-    background-image: url(ddd.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-} */
-
-
-#div4{
+/* #div4{
     width: 50%;
     background-color:red;
     padding-top: 50%; 
-    /* padding-top: 50%;    元素高度相对于父元素(body)宽度 */
-}
+    padding-top: 50%;    相对于父元素(body)宽度
+} */
 
 
-#div5{
+/* #div5{
     width: 30%;
     background-color: yellow;
     padding-top: 30%;
-}
+} */
 
 
 </style>
@@ -52,6 +56,7 @@ border-bottom-color: deeppink;
 <body>
     
 <div id="div1">
+asdas
 </div>
 
 <div id="div2">
@@ -69,15 +74,16 @@ border-bottom-color: deeppink;
 </html>
 
 
-<!-- background-origin: border-box;
+<!-- background-origin: padding-box(默认值);
 border-box：
 从border区域（含border）开始显示背景图像。
 padding-box：
 从padding区域（含padding）开始显示背景图像。
 content-box：
 从content区域开始显示背景图像。
-border以外的background被裁减掉 
-background-clip: border-box;  -->
+border     (以外)        的background被裁减掉 
+background-clip: border-box; (默认值)
+ -->
 
 
 <!-- /* background-size: cover：

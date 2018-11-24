@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #parent{
+
+        width: 500px;
+        height: 500px;
+        display: -webkit-flex;
+        background: red;
+        flex-direction: row;
+    }
+
+    #child1{
+        height: 200px;
+        background: black;
+        flex-grow: 1;
+        /* 分配父元素的空间 */
+    }
+    #child2{
+        flex-grow: 5;
+        height: 200px;;
+        flex-grow: 5;
+        background: blue;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div id="parent">
+            <div id="child1"></div>
+            <div id="child2"></div>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 500px;
+            background: blue;
+            display: flex;
+            flex-direction: column-reverse;
+         
+        }
+            
+        .child1{
+            flex-grow: 3;
+            background: red;
+           
+            
+
+        }
+    .child2{
+            
+            background: yellow;
+            
+            flex-grow: 1;
+            
+    }
+
+
+        /* 弹性盒模型
+        父元素：
+        display:flex
+        flex-direction：row | row-reverse | column | column-reverse
+        横向从左到右排列 |横向相反 | 即纵向从上往下排列 |纵向相反
+        align-items:flex-start | flex-end | center | baseline | stretch
+        纵轴垂直对齐方式
+        justify-content：flex-start | flex-end | center | space-between | space-around
+        横轴水平对齐方式 */
+     
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+    </div>
+
+
+
+
+    
+</body>
+</html>

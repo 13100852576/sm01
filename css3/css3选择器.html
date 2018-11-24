@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    body{
+        height: 30000px;
+    }
+    a  ~ div{
+        color: crimson;
+    }
+    /* 兄弟选择符 会选择同一个父元素中在a元素之后的所有div */
+
+    span +a{
+    
+        color: yellow;
+    }
+            /* 相邻选择符  会选择同一个父元素中与span紧邻   紧邻 必须紧邻 隔着东西不可以的第一个a元素 */
+    
+    div[id]{
+
+        color: green;
+    }
+     /* 属性选择符  选择div元素中带有id属性的 */
+     div[id="red"]{
+         color: red;
+     }
+     /* 属性选择符  选择div元素中带有id属性的  且id属性值为red的*/
+
+     div[id~="red"]{
+         color: blue;
+     }
+     /* 属性选择符  选择div元素中带有id属性的  且id属性值为red  red与其他是有空格分割开来 的*/
+    div[id^="red"]{
+        color: pink;
+    }
+    /* 属性选择符  选择div元素中带有id属性的  且id属性以red开头的*/
+    div[id$="3"]{
+
+        background: red;
+    }
+     /* 属性选择符  选择div元素中带有id属性的  且id属性以3结尾的*/
+    div[id*="e"]
+    {
+        
+        background: darkgoldenrod;
+        }
+    /* 属性选择符  选择div元素中带有id属性的  且id属性中带有e的*/
+    div[id|="8"]{
+        background: pink;
+    }
+    /* 属性选择符  选择div元素中带有id属性的  属性值为8 或者以8-开头的 */
+    
+    li:first-child{
+        color: darkmagenta;
+    }
+    /* E:first-child选择符，E必须是它的兄弟元素中的第一个元素，换言之，E必须是父元素的第一个子元素。 */
+    li:last-child{
+        color: red;
+    }
+    /* E:last-child选择符，E必须是它的兄弟元素中的最后一个元素，换言之，E必须是父元素的最后一个子元素。 */
+    /* b:not(:first-child){
+        color: gold;
+    } */
+    /* 表示在b元素的兄弟中出了第一个兄弟不加颜色，其他的都加  */
+   b:not(#p){
+       color: gold;
+   }
+   /* 使用id class 等属性选择符不加id 或者class */
+    span:first-child{
+        background: cornflowerblue;}
+
+        strong:nth-child(2n+1){
+        
+        background: red;
+        }
+    /* 选择span父类中的第一个span n代表0 2 4 6 8 ,也可以用odd 基数 even偶数.这里的n指的是父元素中有所子元素,而不是span元素,若n指的不是span则选择符无效 */
+    /* E:only-child{}
+    匹配父元素仅有的一个子元素E  不能有其他种类元素*/
+
+    /* E:first-of-type {  } 
+     与first-child相似 但是 他选择的是父类中第一种E标签而不强制要求父类中的第一个标签  */
+    /* E:only-of-type{} 
+     选中父类中的唯一一个E标签  可以有其他种类的元素 但是E元素只能有一种 */
+    /* E:nth-of-type(){}
+    选中父类中第几个E元素 */
+    /* E:checked  选择符号选中时候的样式*/
+    /* E:enabled E:disabled   按钮的可用与不可用 */
+    #div001::before{
+        content: "content";
+        background: red;
+        }
+        #div001::after{
+        content: "content";
+        background:blue;
+        } 
+        /* 在当前元素的所有子类元素的前边或者后面加一个元素 默认伪元素是行元素 必须与content连用 */
+
+        #div002{
+            width: 300px;
+        }
+        #div002::first-letter{
+            color: blue;
+        }
+        /* 为元素的第一个字母设置属性 */
+        #div004{
+            width: 300px;
+        }
+        #div004::first-line{
+            color: red;
+        }
+        /* 为元素的第一行设置属性 */
+        
+       
+       
+           
+
+    </style>
+
+</head>
+
+<body>
+    
+        <span>span</span>
+    <div id="div">asdasd</div>
+    <div id="div2">asdasd</div>
+<div>
+    <a href=""></a>
+<a href="">11</a>
+<a href="">22</a>
+<a href="">33</a>
+<a href="">44</a>
+<h1>h</h1>
+<h1>h</h1>
+<h1>h</h1>
+<h1>h</h1>
+<div>红色</div>
+<div>红色</div>
+<div>红色</div>
+<div>红色</div>
+<div>红色</div>
+<div id="green">绿色 且有黄色背景</div>
+<div id="red">红色    且有黄色背景</div>
+<div id="aaaa" >div</div>
+<div id="a b ">蓝色</div>
+<div id="aa">div</div>
+<div id="a">蓝色</div>
+<div id="qwe">粉色   且有黄色背景</div>
+<div id="qwer" >粉色   且有黄色背景</div>
+<div id="qqwe">div     且有黄色背景</div>
+<div id="123">有红色背景</div>
+<div id="2222223">有红色背景</div>
+<div id="31">没有背景</div>
+<div id="3">有红色背景</div>
+<div id="8-">有粉色背景</div>
+<div id="8">有粉色背景</div>
+<div id="888">没有背景</div>
+<div id="8-111">有粉色背景</div>
+</div>
+<br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div>
+        <span>123</span>
+        <span>123</span>
+        <span>123</span>
+        <!-- <h1>h</h1>
+        <h1>h</h1>
+        <h1>h</h1>
+        <h1>h</h1> -->
+        <a href="">黄色</a>
+        <a href="">123</a>
+        <a href="">123</a>
+    </div>
+    <ul>
+   <li>first-child 紫色</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>li</li>
+   <li>last-child 红色</li>
+    </ul>
+    <div>
+    <b>金色</b>
+    <b id="p">b</b>
+    <b>金色</b>
+    <b>金色</b>
+    <b>金色</b>
+    <b>金色</b>
+    <b>金色</b>
+    <b>金色</b>
+    </div>
+<div>
+<strong>背景</strong>
+      <strong>1</strong>
+      <strong>背景</strong>
+      <strong>1</strong>
+<strong>背景</strong>
+      <strong>1</strong>
+      <strong>背景</strong>
+      <strong>1</strong>
+      <strong>背景</strong>
+      <strong>1</strong>
+      <strong>背景</strong>
+      <strong>1</strong>
+    </div>
+<div >
+<div id="div001">div001</div>
+<div>这里</div>
+<div>这里</div>
+<div>这里</div>
+<div id="div002">asdasdasd asd asd  asdasdasdasdasdasdasd asd asdasdasd  asd as d</div>
+<br><br><br><br><br><br><br><br><br>
+<div id="div004"> 111111111 11111111 111111111 111111111 111111111 1111111111 11111111111111111111111 1111111111 1111111111111 11111111111111 11111111 111111111 111111111 111111111 1111111111111 11111111 111111111 111111111 111111111 1111111111111 11111111 111111111 111111111 111111111 1111111111111 11111111 111111111 111111111 111111111 1111</div>
+
+
+
+
+    
+
+</body>
+</html>

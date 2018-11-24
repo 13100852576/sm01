@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    <script>
+      function p(n){
+            if(n==1||n==2){
+                return 1;
+            }
+            var a=1;
+            var b=1;
+             var fibo=0;
+            for( var i=3;i<=n;i++){
+                fibo=a+b;
+                a=b;
+                b=fibo;
+            }
+                    return fibo;
+
+      }
+        alert(p(4));
+                
+                
+
+    </script>
+</body>
+</html>
