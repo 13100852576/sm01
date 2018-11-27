@@ -18,26 +18,43 @@
 
 </head>
 <body>
-    <script>
-      function p(n){
-            if(n==1||n==2){
-                return 1;
-            }
-            var a=1;
-            var b=1;
-             var fibo=0;
-            for( var i=3;i<=n;i++){
-                fibo=a+b;
-                a=b;
-                b=fibo;
-            }
-                    return fibo;
+        <script>
+        function years(year)
+        {
+             dates=[31,28,31,30,31,30,31,31,30,31,30,31];
+            if ((year%4==0&&year%100!==0)||year%400==0){
+            alert( year+'这是闰年'+dates);
+            dates=[31,29,31,30,31,30,31,31,30,31,30,31];
+                            }
+            else{
+                alert(year+'这不是闰年'+dates);
+                }
+        } 
 
-      }
-        alert(p(4));
-                
-                
+
+            
+            
+
+            
+           
+            function DayOfYear(d)
+            {   years(d.getFullYear());
+                sum=0;
+                k=d.getMonth();
+                for(var j=1;j<=k;j++)
+                {
+                sum=sum+dates[j];
+                }
+                return sum;
+            }
+                        
+                d=new Date();            
+              document.write(d.getFullYear()+'.'+d.getMonth()+'.'+d.getDate()+'这是一年中第的第'+DayOfYear(d)+'天');
 
     </script>
+
+                
+   
+            
 </body>
 </html>
