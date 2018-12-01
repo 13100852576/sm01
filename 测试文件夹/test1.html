@@ -5,56 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<style>
+    <style>
+ 
 
-
-
-
-
-</style>
-
-
-
-
+ body{
+       display: flex;
+       -webkit-flex-direction: row;
+   }
+   #div2{
+      
+       height: 200px;
+       background: blue;
+       flex-grow: 1;
+   }
+  
+    #div1{
+        width: 200px;
+        background: red;
+        flex-grow: 1;
+    }
+    
+    
+    </style>
 </head>
 <body>
-        <script>
-        function years(year)
-        {
-             dates=[31,28,31,30,31,30,31,31,30,31,30,31];
-            if ((year%4==0&&year%100!==0)||year%400==0){
-            alert( year+'这是闰年'+dates);
-            dates=[31,29,31,30,31,30,31,31,30,31,30,31];
-                            }
-            else{
-                alert(year+'这不是闰年'+dates);
-                }
-        } 
+    
+
+        <div id="div1"></div>
+        <div id="div2"></div>
 
 
-            
-            
 
-            
-           
-            function DayOfYear(d)
-            {   years(d.getFullYear());
-                sum=0;
-                k=d.getMonth();
-                for(var j=1;j<=k;j++)
-                {
-                sum=sum+dates[j];
-                }
-                return sum;
-            }
-                        
-                d=new Date();            
-              document.write(d.getFullYear()+'.'+d.getMonth()+'.'+d.getDate()+'这是一年中第的第'+DayOfYear(d)+'天');
 
-    </script>
 
-                
-   
-            
+
 </body>
 </html>

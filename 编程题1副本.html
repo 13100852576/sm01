@@ -7,19 +7,40 @@
     <title>Document</title>
     <style>
                 #div0{
-                            height: 409px;
-                            width: 409px;
-                           
-                            border:3px solid black;
+                            height: 429px;
+                            width: 429px;
+                            position: relative;
+                          
                             }
                 #div0 div{
-
+                    position: absolute;
                     width: 200px;
                     height: 200px;
                     border:3px solid red;
-                    float:right;
-
+                    }
+            #div1{
+                    left: 0px;
+                    top: 0px;
                 }
+
+            #div2{
+                    left: 203px;
+                    top: 0px;
+
+            }
+            #div3{
+                    left: 0px;
+                    top: 203px;
+            }
+            #div4{
+                left: 203px;
+                top: 203px;
+            }
+            #div0 div:hover{
+
+                border-color:black;
+                z-index: 1; 
+            }
     </style>
 </head>
 <body>
@@ -27,10 +48,10 @@
 
 
     <div id="div0">
-        <div  id="div1"></div>
-        <div id="div2"></div>
-        <div id="div3"></div>
-        <div id="div4"></div>
+        <div  id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
 
 
     </div>
