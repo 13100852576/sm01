@@ -1241,6 +1241,7 @@ color:green;
                     border-top: #646464 solid 1px;
                     border-bottom: #646464 solid 1px;
                     margin: 0 auto;
+                   
                     
                     /* background: black; */
                     
@@ -1295,4 +1296,29 @@ color:green;
                 }
                 #xuanzhuan:hover i{
                     transform: rotate(360deg);
+                }
+                #top-search{
+                    width: 100%;
+                    height: 60px;
+                    background: #ff0036;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                   z-index: 10;
+
+
+                }
+                #search{
+                    width: 648px;
+                    height: 30px;
+                }
+                #input-search{
+                    position: absolute;
+                    left: 24%;
+                    top:25%;
+                }
+                #searchbutton{
+                    width: 90px;
+                    height: 32px;
+                    background: #ff0036;
                 }
