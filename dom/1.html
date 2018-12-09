@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body{
-
-        }
-    #div1{
-        width: 50%;
-        padding-top: 10%;
-        background: red;
-    }
-   
-    
-    </style>
 </head>
 <body>
-    
-<div id="div1"></div>
-<div id="div2"></div>
-<div id="div3"></div>
+    <button id="forward">
+            历史下一个
+    </button>
+    这是第一页
+<a href="2.html">去第二页</a>
 
+
+
+<script>
+
+var Oforward=document.getElementById('forward');
+Oforward.onclick=function(){
+    history.go(1);
+}
+
+
+
+</script>
 </body>
 </html>

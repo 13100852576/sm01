@@ -5,25 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    body{
+        height: 2000px;
+    }
+    </style>
 </head>
 <body>
-    <button id="stop">
+    
+<button id="click">
+    click
+</button>
+<button id="stop">
         stop
     </button>
 
+<script>
 
-    <script>
-    
-    var timer=setInterval(function(){
-        console.log(Math.random());
-    },3000)
-    
-    var astop=document.getElementById('stop');
-    astop.onclick
-    
-    
-    
-    
-    </script>
+// var oBut=document.getElementById('click');
+// oBut.onclick=function(){
+//     scrollTo(0,1000);
+//     moveBy(100,100);
+//     moveTo(500,500);
+// }
+
+// var a=confirm('确认关闭吗');
+// alert(a);
+// var b=prompt('输入一个数字',100);
+
+
+
+
+// var timer=setInterval(function(){
+//         console.log(Math.random());
+
+// },1000)
+
+// var oStop=document.getElementById('stop');
+// oStop.onclick=function(){
+
+//     clearInterval(timer);
+// }
+
+var timer1=setTimeout(function(){
+    console.log(Math.random()*100);
+},6000);
+
+var timer2=setTimeout(function(){
+    console.log(Math.random()*100);
+},6000);
+
+var timer3=setTimeout(function(){
+    console.log(Math.random()*100);
+},6000);
+
+var timer4=setTimeout(function(){
+    console.log(Math.random()*100);
+},6000);
+
+var timer5=setTimeout(function(){
+    console.log(Math.random()*100);
+},6000);
+
+var Ostop=document.getElementById('stop');
+Ostop.onclick=function(){
+    console.log(timer5);
+            clearTimeout(timer1);
+}
+
+
+
+</script>
+
 </body>
 </html>

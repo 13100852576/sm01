@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+            <li class="a">1</li>
+            <li class="a b">2</li>
+            <li class="c">3</li>
+            <li class="p">4</li>
+            <li class="k">5</li>
+            <li class="a">6</li>
+    </ul>
+
+
+
+    <script>
+  
+
+       function getClassName(classN){
+        var result=[];
+        var aALL=document.getElementsByTagName('*');
+        for(var i=0;i<aALL.length;i++){
+        var aP= aALL[i].className.split(" ");
+           for(var j=0;j<aP.length;j++){
+               if(aP[j]==classN){
+                   result.push(aALL[i]);
+               }
+           }
+        }
+        return result;
+        }
+    
+    var aH1=getClassName('a');
+    for(var t=0;t<aH1.length;t++){
+        aH1[t].style.background="red";
+    }
+    
+    
+</script>
+</body>
+</html>

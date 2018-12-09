@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+
+        overflow: hidden;
+    }
+    li{
+       width: 100px;
+       height: 50px;
+       background: red;
+       float: left;
+       list-style: none;
+       margin-right: 20px;
+       cursor: pointer;
+
+    }
+    #content{
+        background: green;
+        width: 400px;
+        height: 400px;
+            }
+
+
+        #btn-box .selected{
+            background: blue;
+        }
+
+          #content  .active{
+            display: block;
+        }
+        #content div {
+            display: none;
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+    
+        <div id="container">
+                <ul id="btn-box">
+                    <li class="selected">1111</li>
+                    <li>2222</li>
+                    <li>3333</li>
+                </ul>
+                <div id="content">
+                    <div class="active">content1111</div>
+                    <div>content2222</div>
+                    <div>content3333</div>
+                </div>
+            </div>
+
+        <script>
+            
+            var aLi=document.getElementsByTagName('li');
+            var oContent=document.getElementById('content');
+            var aDiv=oContent.getElementsByTagName('div');
+
+
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].th=i;
+                aLi[i].onclick=function(){
+                    for(var j=0;j<aLi.length;j++){
+                        aLi[j].className='';
+                        aDiv[j].className='';
+                    }
+                    this.className='selected';
+                    aDiv[this.th].className='active';
+
+                }
+
+            }
+
+
+
+
+
+
+
+       
+        
+        
+        
+        
+        
+        
+        </script>
+
+
+
+</body>
+</html>
