@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+         #div0{
+            width: 400px;
+            height: 200px;
+            border:1px solid #000;
+            margin:100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #box{
+            list-style: none;
+            width:520px;
+            position: absolute;
+        }
+        li{
+            width: 120px;
+            height: 120px;
+            margin-right: 10px;
+            background: pink;
+            float: left;
+        }
+        
+        span{
+           display: inline-block;
+            margin-right: 20px;
+            width: 100px;
+            height: 50px;
+           text-align: center;
+            background: red;
+        }
+        #lr-span{
+          position: absolute;
+          top: 140px;
+          left: 80px;
+ 
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <ul id="box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul id="lr-span">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </ul>
+    </div>
+
+
+
+    <script>
+    var oBox=document.getElementById('box');
+    var oLeft=document.getElementById('left');
+    var oRight=document.getElementById('right');
+    var speed=3;
+    oBox.innerHTML=oBox.innerHTML+oBox.innerHTML;
+    oBox.style.width=oBox.offsetWidth*2+'px';
+   
+        var timer=setInterval(function()
+        {
+            oBox.style.left=oBox.offsetLeft-speed+'px'
+            if(oBox.offsetLeft<=-oBox.offsetWidth/2)
+            {
+                    oBox.style.left=0+'px';
+            }
+            if(oBox.offsetLeft>0){
+                oBox.style.left=-oBox.offsetWidth/2+'px';
+            }
+        }
+        ,10);
+    
+    oLeft.onclick=function(){
+        speed=3;
+    }
+    oRight.onclick=function(){
+        speed=-3;
+    }
+    
+    
+    
+    
+    </script>
+</body>
+</html>

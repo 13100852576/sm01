@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+    #div1{
+        width: 200px;
+        background: #999999;
+        display: none;
+        position: absolute;
+       
+
+    }
+    li{
+        list-style: none;
+    }
+    li:hover{
+        background: red;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ul>
+            <li>1111</li>
+            <li>2222</li>
+            <li>3333</li>
+        </ul>
+    </div>
+
+    <script>
+    var oDiv1=document.getElementById('div1');
+    var aLi=document.getElementsByTagName('li');
+    document.oncontextmenu=function(w){
+            oDiv1.style.display='block';
+            oDiv1.style.left=w.clientX+'px';
+            // 事件参数.clientX获取当前鼠标距离浏览器表框的距离
+            oDiv1.style.top=w.clientY+'px';
+            
+            
+            //组织默认行为
+
+
+                w.preventDefault();  
+                // 标准浏览器下
+                w.returnValue=false;
+                // ie浏览器下
+                return false;
+                // 通用
+
+    }
+
+    for(var i=0;i<aLi.length;i++ ){
+        aLi[i].onclick=function(){
+            oDiv1.style.display='none';
+            console.log(this.innerHTML);
+            // this.innerHTML获取内容
+        }
+    }
+
+    
+    
+    
+    </script>
+</body>
+</html>

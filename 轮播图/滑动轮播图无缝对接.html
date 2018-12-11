@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    #number{
+        list-style: none;
+        position: absolute;
+        right: 25px;
+        bottom: 25px; 
+    }
+    #leftright-ul{
+        list-style: none;
+        position: absolute;
+        bottom: 25px;
+        left: 0px;
+    }
+    #number li{
+        float: left;
+        margin-left: 15px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        background: blue;
+        text-align: center;
+        border-radius: 20%;
+                }
+    #leftright-ul li{
+        float: left;
+        margin-left: 15px;
+    }
+    #leftright-ul  li{
+        width: 60px;
+        height: 20px;
+        background: blue;
+        text-align: center;
+        border-radius: 10%;
+    }
+    #lunbotudiv{
+        width: 750px;
+        height: 291px;
+        margin: 150px auto;
+        /* border: 1px solid black; */
+        position: relative;
+        overflow: hidden;
+
+    }
+    
+    #img-box{
+        width: 4500px;
+        position: absolute;
+        transition: left 1s linear;
+        top: 0%;
+        left: 0%;
+        
+    }
+    #img-box img{
+        float: left;
+        width: 750px;
+        height: 291px;
+    }
+    
+    .selected{
+        background: green !important;
+    }
+    
+    li{
+        cursor: pointer;
+    }
+    
+    
+    </style>
+</head>
+<body>
+        <div id="lunbotudiv">
+            <div id="img-box">
+                    <img src="../tmall/image/lunbo1.webp" alt="">
+                    <img src="../tmall/image/lunbo2.jpg" alt="">
+                    <img src="../tmall/image/1.jpg" alt="">
+                    <img src="../tmall/image/lunbo4.jpg" alt="">
+                    <img src="../tmall/image/lunbo5.jpg" alt="">
+                    <img src="../tmall/image/lunbo6.jpg" alt="">
+                    <img src="../tmall/image/1.jpg" alt="">
+                </div>
+                    
+                <ul id="number">
+                    
+                    
+                    <li class="selected">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+
+                <ul id="leftright-ul">
+                    <li id="left"> 上一张</li>
+                    <li id="right"> 下一张</li>
+                </ul>
+            </div>
+
+        </div>
+
+<script>
+    var oLunbotu=document.getElementById('lunbotudiv');
+    var oBtn1=document.getElementById('number');
+    var oBtnnum=oBtn1.getElementsByTagName('li');
+    var oBtnl=document.getElementById('left');
+    var oBtnr=document.getElementById('right');
+
+    
+    var oImgbox=document.getElementById('img-box');
+    var iNow = 0;
+    var timer1;
+    
+
+
+
+    for(var i=0;i<oBtnnum.length;i++){
+       oBtnnum[i].index=i;
+        oBtnnum[i].onclick=function(){
+            iNow=this.index;
+            
+            for(var j=0;j<oBtnnum.length;j++){
+            oBtnnum[j].className='';
+        }
+            this.className='selected';
+            oImgbox.style.left=-this.index*750+'px';
+        }
+    }
+    
+
+    oBtnl.onclick=function(){
+            iNow--;
+            for(var j=0;j<oBtnnum.length;j++){
+            oBtnnum[j].className='';
+        }
+        if(iNow==-1){
+            iNow=oBtnnum.length-1;
+        }
+            oBtnnum[iNow].className='selected';
+            oImgbox.style.left=-iNow*750+'px';
+    }
+
+
+
+    oBtnr.onclick=function(){
+            iNow++;
+            for(var j=0;j<oBtnnum.length;j++){
+            oBtnnum[j].className='';
+        }
+        if(iNow==oBtnnum.length){
+            iNow=0;
+        }
+            oBtnnum[iNow].className='selected';
+            oImgbox.style.left=-iNow*750+'px';
+    }
+    
+
+    function play(){
+      timer1=setInterval(function(){
+         oBtnr.onclick();
+     },2000)
+    }
+
+    play();
+    oLunbotu.onmouseover = function(){
+            clearInterval(timer1);
+        }
+    oLunbotu.onmouseout = function(){
+            play();
+        }
+   
+
+
+
+
+</script>
+
+
+</body>
+</html>

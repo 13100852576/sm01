@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+    #div1{
+        
+        width: 200px;
+        background: #999999;
+        position: absolute;
+        left: 250px;
+        top: 50%;
+        display: none;
+
+    }
+    .selected{
+        background: green;
+    }
+    li:hover{
+       
+        background: red;
+    }
+    li{
+        list-style: none;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ul>
+            <li>11111</li>
+            <li>2222</li>
+            <li>3333</li>
+        </ul>
+    </div>
+    <script>
+    var oDiv1=document.getElementById('div1');
+    var aLi=document.getElementsByTagName('li')
+    document.oncontextmenu=function(e){
+                oDiv1.style.display='block';
+                oDiv1.style.left=e.clientX+'px';
+                oDiv1.style.top=e.clientY+'px';
+                e.preventDefault();
+
+                // return false;
+    }
+
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].onclick=function(){
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].className='';
+            }
+           
+            oDiv1.style.display='none';
+            console.log(this.innerHTML
+            );
+        }
+    }
+    
+    
+    </script>
+</body>
+</html>

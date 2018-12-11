@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+
+
+    li{
+        list-style:none;
+        float: left;
+        height: 22px;
+        margin-right: 10px;
+        width: 22px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20%;
+        line-height:22px; 
+    }
+    ul{
+        text-align: center;
+    }
+    #div1{
+        width: 750px;
+            height: 291px;
+            margin:100px auto;
+            position: relative;
+    }
+    #lf-ul{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+    #number-ul{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    img{
+        display: none;
+    }
+    .selected{
+        display: block;
+    }
+    .color{
+        background: red;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/1.jpg" class="selected" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+        <img src="img/5.jpg" alt="">
+        <ul id="lf-ul">
+            <li id="left">&lt;</li>
+            <li id="right">&gt;</li>
+        </ul>
+
+        <ul id="number-ul">
+            <li class="color">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+<!-- getid只能在document下面找 -->
+
+        <script>
+            var th=0;
+            var oDiv=document.getElementById('div1');
+            var oU1=document.getElementById('number-ul');
+            var aNli1=oU1.getElementsByTagName('li');
+            var oU2=document.getElementById('lf-ul');
+            var aNli2=oU2.getElementsByTagName('li');
+        var aImg=document.getElementsByTagName('img');
+        var oLeft=document.getElementById('left');
+        var oRight=document.getElementById('right');
+
+
+        for(var i=0;i<aNli1.length;i++)
+        {
+            aNli1[i].index=i;
+            aNli1[i].onclick=function(){
+                    th=this.index;
+                    dO(this.index);
+            }
+
+        }
+        
+        oLeft.onclick=function(){
+           th--;
+           if(th==-1){
+               th=aNli1.length-1;
+           }
+           dO(th);
+
+        }
+
+        oRight.onclick=function(){
+           th++;
+           if(th==aNli1.length){
+               th=0;
+           }
+           dO(th);
+        }
+        
+        function dO(a){
+            for(var j=0;j<aNli1.length;j++){
+                        aNli1[j].className='';
+                        aImg[j].className='';
+
+                    }
+                   aNli1[a].className='color';
+                aImg[a].className='selected';
+        }
+
+        var timer1=setInterval(function(){
+                oRight.onclick();
+        },1000);
+        oDiv.onmouseover=function(){
+            clearInterval(timer1);
+        }
+        oDiv.onmouseout=function(){
+            timer1=setInterval(function(){
+                oRight.onclick();
+        },1000);
+        }
+        </script>
+    </div>
+</body>
+</html>

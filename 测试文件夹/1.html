@@ -6,21 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 <style>
-    /* #div3{
-
-        clear: both;
-    } */
-
-
-    /* #div0{
-
-
-        height: 80px;
-    } */
-
+    
+    #div0{
+        overflow: hidden;
+        height: 200px;
+    }
 #div1
 {
-
     height: 50px;
     width: 200px;
     background: red;
@@ -28,26 +20,27 @@
 }
 #div2
 {
-
-
     height: 50px;
     width: 200px;
     background: blue;
     float: left; 
 }
 
+
+
+ #div4{
+ /* height: 300px;
+ width: 300px;
+ background: green; */
+ /* clear: both; */
+} 
+
+
 #div0::after{
-    content:"div0div0div0div0div0";
-    display: block; 
-    clear: both; 
+    content: 'div5';
+    display: block;
+    clear: both;
 }
-
-
-/* #div4{
-clear: both;
-
-
-} */
 </style>
 </head>
 <body>
@@ -55,7 +48,7 @@ clear: both;
     <div id="div1">111</div>
     <div id="div2">222</div>
     <div id="div4">444</div>
-    <!-- <div id="div3">333</div> -->
+    
 </div>
 <!-- 
     float: left right
@@ -74,6 +67,6 @@ clear: both;
 
  --> 
 
-<h1>123123</h1>
+
 </body>
 </html>

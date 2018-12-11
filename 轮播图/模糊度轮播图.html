@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #lunbotudiv{
+            width: 500px;
+            height: 250px;
+            margin: 100px auto;
+            position: relative;
+            border: 1px solid black;
+            }
+        ul{
+            list-style: none;
+            position: absolute;
+            left: 180px;
+            top: 210px;
+            
+        }
+        #image img{
+            width: 500px;
+            height: 250px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition: opacity 2s linear;
+           
+        }
+
+      
+        
+        
+           #image  #img1{
+                opacity: 1 ;
+            }
+        li{
+           float: left;
+            margin-left: 15px;
+            height: 20px;
+            width: 20px;
+            background: red;
+            text-align: center;
+            cursor: pointer;
+            }
+        .selected{
+            background: blue;
+        }
+        #image .toumingdu{
+            opacity: 1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="lunbotudiv">
+        <div id="image">
+            <img id="img1" src="../tmall/image/1.jpg" alt="">
+            <img src="../tmall/image/2.jpg" alt="">
+            <img src="../tmall/image/3.jpg" alt="">
+            <img src="../tmall/image/4.jpg" alt="">
+            <img src="../tmall/image/5.jpg" alt="">
+            <img src="../tmall/image/1.jpg" alt="">
+        </div>
+        <ul id="ul1">
+            <li >1</li>
+            <li >2</li>
+            <li >3</li>
+            <li >4</li>
+            <li >5</li>
+            <li >6</li>
+        </ul>
+
+
+    </div>
+
+
+    <script>
+        var oUl=document.getElementById('ul1');
+        var oLi=oUl.getElementsByTagName('li');
+        var oImg=document.getElementsByTagName('img');
+
+
+        for(var i=0;i<oLi.length;i++){
+                oLi[i].index=i;
+                oLi[i].onclick=function(){
+                    for(var j=0;j<oLi.length;j++){
+                        oLi[j].className='';
+                        oImg[j].className='';
+                    }
+
+                    this.className='selected';
+                    oImg[this.index].className='toumingdu';
+                }
+
+        }
+
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>
