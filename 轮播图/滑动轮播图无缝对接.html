@@ -1,189 +1,151 @@
+<!-- transition只有在一个值变化到另一个值时有效果，从auto到一个值没有效果 -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    *{
-        padding: 0px;
-        margin: 0px;
-    }
-    #number{
-        list-style: none;
-        position: absolute;
-        right: 25px;
-        bottom: 25px; 
-    }
-    #leftright-ul{
-        list-style: none;
-        position: absolute;
-        bottom: 25px;
-        left: 0px;
-    }
-    #number li{
-        float: left;
-        margin-left: 15px;
-        height: 20px;
-        width: 20px;
-        line-height: 20px;
-        background: blue;
-        text-align: center;
-        border-radius: 20%;
-                }
-    #leftright-ul li{
-        float: left;
-        margin-left: 15px;
-    }
-    #leftright-ul  li{
-        width: 60px;
-        height: 20px;
-        background: blue;
-        text-align: center;
-        border-radius: 10%;
-    }
-    #lunbotudiv{
-        width: 750px;
-        height: 291px;
-        margin: 150px auto;
-        /* border: 1px solid black; */
-        position: relative;
-        overflow: hidden;
+        li {
+            list-style: none;
+            float: left;
+            height: 22px;
+            margin-right: 10px;
+            width: 22px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20%;
+            line-height: 22px;
+        }
 
-    }
-    
-    #img-box{
-        width: 4500px;
-        position: absolute;
-        transition: left 1s linear;
-        top: 0%;
-        left: 0%;
-        
-    }
-    #img-box img{
-        float: left;
-        width: 750px;
-        height: 291px;
-    }
-    
-    .selected{
-        background: green !important;
-    }
-    
-    li{
-        cursor: pointer;
-    }
-    
-    
+        ul {
+            text-align: center;
+        }
+
+        #div1 {
+            border: 1px solid black;
+            width: 750px;
+            height: 291px;
+            margin: 100px auto;
+            position: relative;
+            /* overflow: hidden; */
+
+        }
+
+        #img-box {
+            height: 291px;
+            width: 4500px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        #lf-ul {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        #number-ul {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        img {
+            float: left;
+        }
+
+        /* .selected{
+        display: block;
+    } */
+        .color {
+            background: red;
+        }
     </style>
 </head>
+
 <body>
-        <div id="lunbotudiv">
-            <div id="img-box">
-                    <img src="../tmall/image/lunbo1.webp" alt="">
-                    <img src="../tmall/image/lunbo2.jpg" alt="">
-                    <img src="../tmall/image/1.jpg" alt="">
-                    <img src="../tmall/image/lunbo4.jpg" alt="">
-                    <img src="../tmall/image/lunbo5.jpg" alt="">
-                    <img src="../tmall/image/lunbo6.jpg" alt="">
-                    <img src="../tmall/image/1.jpg" alt="">
-                </div>
-                    
-                <ul id="number">
-                    
-                    
-                    <li class="selected">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-
-                <ul id="leftright-ul">
-                    <li id="left"> 上一张</li>
-                    <li id="right"> 下一张</li>
-                </ul>
-            </div>
-
+    <div id="div1">
+        <div id="img-box">
+            <img src="img/1.jpg" class="selected" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+            <img src="img/1.jpg" alt="">
         </div>
+        <ul id="lf-ul">
+            <li id="left">&lt;</li>
+            <li id="right">&gt;</li>
+        </ul>
 
-<script>
-    var oLunbotu=document.getElementById('lunbotudiv');
-    var oBtn1=document.getElementById('number');
-    var oBtnnum=oBtn1.getElementsByTagName('li');
-    var oBtnl=document.getElementById('left');
-    var oBtnr=document.getElementById('right');
+        <ul id="number-ul">
+            <li class="color">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <!-- getid只能在document下面找 -->
+        <script src="../dom/jslib.js"></script>
+        <script>
+            var oBox = document.getElementById('img-box');
+            var aImg = document.getElementsByTagName('img');
+            var aNum = document.getElementById('number-ul');
+            var aLi = aNum.getElementsByTagName('li');
+            var oLeft = document.getElementById('left');
+            var oRight = document.getElementById('right');
+            var th = 0;
 
-    
-    var oImgbox=document.getElementById('img-box');
-    var iNow = 0;
-    var timer1;
-    
 
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].index = i;
+                aLi[i].onclick = function () {
+                    play(this.index)
+                }
 
+            }
+            oRight.onclick = function () {
+                th++;
+                if (th == aImg.length) {
+                    th = 1;
+                    oBox.style.left = 0;
+                }
+                play(th);
 
-    for(var i=0;i<oBtnnum.length;i++){
-       oBtnnum[i].index=i;
-        oBtnnum[i].onclick=function(){
-            iNow=this.index;
+            }
             
-            for(var j=0;j<oBtnnum.length;j++){
-            oBtnnum[j].className='';
-        }
-            this.className='selected';
-            oImgbox.style.left=-this.index*750+'px';
-        }
-    }
-    
-
-    oBtnl.onclick=function(){
-            iNow--;
-            for(var j=0;j<oBtnnum.length;j++){
-            oBtnnum[j].className='';
-        }
-        if(iNow==-1){
-            iNow=oBtnnum.length-1;
-        }
-            oBtnnum[iNow].className='selected';
-            oImgbox.style.left=-iNow*750+'px';
-    }
-
-
-
-    oBtnr.onclick=function(){
-            iNow++;
-            for(var j=0;j<oBtnnum.length;j++){
-            oBtnnum[j].className='';
-        }
-        if(iNow==oBtnnum.length){
-            iNow=0;
-        }
-            oBtnnum[iNow].className='selected';
-            oImgbox.style.left=-iNow*750+'px';
-    }
-    
-
-    function play(){
-      timer1=setInterval(function(){
-         oBtnr.onclick();
-     },2000)
-    }
-
-    play();
-    oLunbotu.onmouseover = function(){
-            clearInterval(timer1);
-        }
-    oLunbotu.onmouseout = function(){
-            play();
-        }
-   
+            oLeft.onclick=function(){
+                th--;
+                if(th=-1){
+                    th=aImg.length-1
+                }
+            }
 
 
 
 
-</script>
 
 
+            function play(k) {
+                for (var j = 0; j < aLi.length; j++) {
+                    aLi[j].className = '';
+                }
+                aLi[k == 5 ? 0 : k].className = 'color';
+                animate(oBox, { left: -750 * k })
+            }
+
+
+
+        </script>
+    </div>
 </body>
+
 </html>

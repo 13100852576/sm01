@@ -28,20 +28,21 @@
         text-align: center;
     }
     #div1{
+        border: 1px solid black;
         width: 750px;
             height: 291px;
             margin:100px auto;
             position: relative;
-            overflow: hidden;
+            /* overflow: hidden; */
            
     }
     #img-box{
         height: 291px;
-        width: 3750px;
+        width: 4500px;
         position: absolute;
         top: 0px;
         left: 0px;
-        transition: left 0.5s linear;       
+              
     }
     #lf-ul{
         position: absolute;
@@ -72,6 +73,7 @@
         <img src="img/3.jpg" alt="">
         <img src="img/4.jpg" alt="">
         <img src="img/5.jpg" alt="">
+        <img src="img/1.jpg" alt="">
          </div>
         <ul id="lf-ul">
             <li id="left">&lt;</li>
@@ -86,7 +88,7 @@
             <li>5</li>
         </ul>
 <!-- getid只能在document下面找 -->
-
+<script src="../dom/jslib.js"></script>
         <script>
             var th=0;
             var oDiv=document.getElementById('div1');
@@ -122,7 +124,8 @@
         oRight.onclick=function(){
            th++;
            if(th==aNli1.length){
-               th=0;
+               oImgbox.style.left=0;
+               th=1;
            }
            dO(th);
         }
@@ -133,8 +136,11 @@
                         aImg[j].className='';
 
                     }
-                   aNli1[a].className='color';
-               oImgbox.style.left=-750*a+'px';
+                   aNli1[a==5?0:a].className='color';
+                   animate(oImgbox,{
+                       left : -a*750
+                   });
+              
         }
 
         // var timer1=setInterval(function(){

@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<style>
-    
-    #div0{
-        overflow: hidden;
-        height: 200px;
-    }
-#div1
-{
-    height: 50px;
-    width: 200px;
-    background: red;
-    float: left;
-}
-#div2
-{
-    height: 50px;
-    width: 200px;
-    background: blue;
-    float: left; 
-}
+    <style>
+        #div0 {
+            /* overflow: hidden; */
+            /* height: 200px; */
+        }
+
+        #div1 {
+            height: 50px;
+            width: 200px;
+            background: red;
+            float: left;
+        }
+
+        #div2 {
+            height: 50px;
+            width: 200px;
+            background: blue;
+            float: left;
+        }
 
 
 
- #div4{
- /* height: 300px;
+        #div4 {
+            height: 300px;
  width: 300px;
- background: green; */
- /* clear: both; */
-} 
+ background: green;
+ float: left;
+        }
 
 
-#div0::after{
-    content: 'div5';
-    display: block;
-    clear: both;
-}
-</style>
+        /* #div0::after {
+            content: 'div5';
+            display: block;
+            clear: both;
+        } */
+        #div5{
+            height: 30px;
+            background: #0f0;
+        }
+    </style>
 </head>
+
 <body>
     <div id="div0">
-    <div id="div1">111</div>
-    <div id="div2">222</div>
-    <div id="div4">444</div>
-    
-</div>
-<!-- 
+        <div id="div1">111</div>
+        <div id="div2">222</div>
+        <!-- <div id="div4">444</div> -->
+
+    </div>
+
+    <div id="div5">dhgdhdh</div>
+    <!-- 
     float: left right
     浮动的元素 脱离文档流 空间释放
 
@@ -65,8 +72,9 @@
 
 
 
- --> 
+ -->
 
 
 </body>
+
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+                <script>
+                    
+
+            var arr1=new Array('1','2','3','4','5');
+            var arr2=[6,7,8,9,10];
+            document.write(arr1.concat(arr2));
+
+            document.write('&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+            document.write(arr1.join('+'));
+            document.write('<br>');
+            document.write(arr1.pop());
+            document.write('<br>');
+            document.write(arr1.shift());
+            document.write('<br>');
+            document.write("arr1:&nbsp"+arr1);
+            document.write('<br>');
+            document.write(arr1.push('5','6','7'));
+            //     返回添加元素后的长度
+            document.write('<br>');
+            document.write("arr1:&nbsp"+arr1);
+            document.write('<br>');
+            document.write(arr1.reverse());
+            document.write('<br>');
+            document.write("arr1:&nbsp"+arr1);
+            document.write('<br>');
+            var arr3=[1012,2,3,42,511,6,721,8,9];
+            document.write(arr3.slice(0,3));
+
+
+
+            var arr4=arr3.sort(
+                function(a,b){
+                    return a-b;
+                }
+            )
+            document.write('<br>');
+            document.write("arr4:&nbsp"+arr4);
+
+              document.write('<br>');
+            document.write("arr3:&nbsp"+arr3);
+
+            arr5=arr3.sort(function(a,b){
+                return b-a;
+            });
+            document.write(arr5);
+            document.write('<br>');
+            document.write("arr5:&nbsp"+arr5);
+
+
+
+            var arr6=[1,2,3,4,5,6,7,9];
+            arr6.splice(0,3,"12123123123",'123123123123');
+            document.write('<br>');
+            document.write(arr6);
+
+            var arr7=[1,2,3];
+            arr7.push('111','222','333');
+           
+            document.write('<br>');
+            document.write(arr7.push('111','222','333'));
+                
+                
+                
+                
+                
+                </script>
+</body>
+</html>

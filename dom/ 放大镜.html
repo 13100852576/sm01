@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #small-box{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        float: left;
+    }
+    span{
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.9);
+        display: none;
+    }
+    #small-box img{
+            width: 400px;
+            height: 400px;
+           
+    }
+    #big-box{
+        width: 400px;
+        height: 400px;
+
+        float: left;
+        border:solid 1px black;
+        overflow: hidden;
+        position: relative;
+        display: none;
+        
+    }
+    #big-box img{
+        top: 0;
+        left: 0;
+        width: 800px;
+        height: 800px;
+        position: absolute;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="small-box">
+        <img src="../轮播图/img/1.jpg" alt="">
+        <span>
+
+        </span>
+    </div>
+    <div id="big-box">
+        <img src="../轮播图/img/1.jpg" alt="">
+    </div>
+
+    <script>
+    var oSpan=document.getElementsByTagName('span')[0];
+    var oSmall=document.getElementById('small-box');
+    var oBig=document.getElementById('big-box');
+    var oImg=oBig.getElementsByTagName('img')[0];
+    
+    oSmall.onmouseover=function(){
+        oSpan.style.display='block';
+        oBig.style.display='block';
+    }
+    oSmall.onmousemove=function(e){
+        
+            oSpan.style.left=e.clientX-oSpan.offsetWidth/2+'px';
+            oSpan.style.top=e.clientY-oSpan.offsetHeight/2+'px';
+           
+            if(oSpan.offsetLeft<=0){oSpan.style.left=0;}
+            if(oSpan.offsetLeft>=oSmall.offsetWidth-oSpan.offsetWidth){
+                oSpan.style.left=oSmall.offsetWidth-oSpan.offsetWidth+'px';
+            }
+            if(oSpan.offsetTop<=0){oSpan.style.top=0;}
+
+            if(oSpan.offsetTop >= oSmall.offsetHeight - oSpan.offsetHeight){
+                oSpan.style.top = oSmall.offsetHeight - oSpan.offsetHeight +"px";
+            }
+                        //小图能走的最大距
+            var smallMax=oSmall.offsetWidth-oSpan.offsetWidth;
+                    // 大图能走的最大距离w
+            var bigMax=oImg.offsetWidth-oBig.offsetWidth;
+                         var percent=oSpan.offsetLeft/smallMax;
+                          oImg.style.left=-percent*bigMax+'px';
+
+             var smallMaxY=oSmall.offsetHeight-oSpan.offsetHeight;
+                    // 大图能走的最大距离w
+            var bigMaxY=oImg.offsetHeight-oBig.offsetHeight;
+                         var percentY=oSpan.offsetTop/smallMaxY;
+                          oImg.style.top=-percentY*bigMaxY+'px';
+
+    }
+    oSmall.onmouseout=function(){
+        oSpan.style.display='none';
+        oBig.style.display='none';
+    }
+    
+    </script>
+</body>
+</html>
