@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #content{
+            width: 180px;
+            border:1px solid #000;
+        }
+        h2{
+            background: #000000;
+            color: #fff;
+        }
+        .ulin{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<ul id="content">
+    <li>
+        <h2>管理区</h2>
+        <ul class="ulin">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+    <li>
+        <h2>交流区</h2>
+        <ul class="ulin">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+</ul>
+
+
+<script>
+var aH2=document.getElementsByTagName('h2');
+
+  for(var i=0; i<aH2.length; i++){
+        aH2[i].onclick = function(){
+            // var oUl = next(this);
+            // .style. 只能取到内联样式
+            if(this.nextElementSibling.style.display == "none" ||this.nextElementSibling.style.display == "" ){
+                this.nextElementSibling.style.display = "block";
+                console.log('none');
+            }else{
+                this.nextElementSibling.style.display = "none";
+                console.log('block');
+            }}
+        
+
+
+ aH2[i].onselectstart = function(){
+            // 阻止h2标签默认的选中文字行为
+            return false;
+        }
+        
+}
+
+
+
+</script>
+
+
+</body>
+</html>

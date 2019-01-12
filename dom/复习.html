@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">111</div>
+    <div id="div2">1111</div>
+    <ul>
+
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        // 里面加css选择器    
+        var oDiv = document.querySelector('#div1');
+        // 选其中第一个
+        var aLi = document.querySelector('li');
+
+
+        // 选所有
+        var ali1 = document.querySelectorAll('li');
+
+
+        // innerHTML和innerText区别
+        // 可以区别标签
+
+        var oDiv2 = document.getElementById('div2');
+        var oDiv1=document.getElementById('div1');
+        oDiv1.innerText= "<h2>哈哈哈哈</h2>";
+        oDiv2.innerHTML = "<h2>哈哈哈哈</h2>";
+
+
+
+      
+        console.log(oDiv1.innerHTML);
+        console.log(oDiv2.innerHTML);
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

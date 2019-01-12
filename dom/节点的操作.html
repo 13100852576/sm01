@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">22</div>
+        <div id="div3">33</div>
+        <div id="div4">44</div>
+        <div id="div5">55</div>
+        <div id="div6">66</div>
+    </div>
+
+    <script>
+    var oDiv1=document.getElementById('div1');
+    var oDiv2=document.getElementById('div2');
+    var oDiv7=document.createElement('div');
+    var oDiv3=document.getElementById('div3');
+    var oDiv4=document.getElementById('div4');
+    var oDiv33=document.createElement('span');
+    var oDiv44=document.createElement('div');
+    oDiv44.innerHTML='44444444aaaaaaaaa';
+    oDiv33.innerHTML='333333333';
+    oDiv7.innerHTML='77777';
+    // oDiv2.className='classdiv2';
+    // oDiv2.index='indexdiv2';
+    oDiv2.setAttribute('className','classnamediv2');
+    oDiv2.setAttribute('index','indexdiv2');
+
+    console.log(oDiv7);
+    var oDiv1=document.getElementById('div1');
+    oDiv1.appendChild(oDiv7);
+    oDiv1.removeChild(oDiv3);
+    oDiv1.insertBefore(oDiv33,oDiv4);
+    oDiv1.replaceChild(oDiv44,oDiv4);
+    var oDiv11=oDiv1.cloneNode();
+    document.body.appendChild(oDiv11);
+    var oBody=document.body;
+    console.log(oBody);
+    console.log(oDiv2.index);
+    console.log(oDiv2.getAttribute('className'));
+    console.log(oDiv2.getAttribute('index'));
+
+    
+    </script>
+</body>
+</html>

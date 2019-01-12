@@ -6,101 +6,121 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    #small-box{
-        width: 400px;
-        height: 400px;
-        position: relative;
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small-box{
+        width: 300px;
+        height: 300px;
+        /* border: 3px solid red; */
         float: left;
-    }
-    span{
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.9);
-        display: none;
-    }
-    #small-box img{
-            width: 400px;
-            height: 400px;
-           
-    }
-    #big-box{
-        width: 400px;
-        height: 400px;
-
+            }
+            #small-box img{
+        width: 300px;
+        height: 300px;
+      
+            }
+            #big-box img{
+        width: 600px;
+        height: 600px;
+      
+            }
+            #big-box {
+        width: 300px;
+        height: 300px;
         float: left;
-        border:solid 1px black;
+        /* border: 3px solid black; */
         overflow: hidden;
-        position: relative;
         display: none;
-        
-    }
-    #big-box img{
-        top: 0;
-        left: 0;
-        width: 800px;
-        height: 800px;
-        position: absolute;
-    }
-
+        position: relative;
+      
+            }
+        #in-box{
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+        }
+        #big-img{
+            position: absolute;
+            /* left: 0px;
+            top: 0px; */
+        }
+       
     </style>
 </head>
 <body>
     <div id="small-box">
-        <img src="../轮播图/img/1.jpg" alt="">
-        <span>
-
-        </span>
+        <img src="../测试文件夹/装修图片/装修1.jpeg" alt="">
+        <div id="in-box"></div>
     </div>
+
     <div id="big-box">
-        <img src="../轮播图/img/1.jpg" alt="">
+        <img id="big-img" src="../测试文件夹/装修图片/装修1.jpeg" alt="">
     </div>
-
     <script>
-    var oSpan=document.getElementsByTagName('span')[0];
     var oSmall=document.getElementById('small-box');
     var oBig=document.getElementById('big-box');
-    var oImg=oBig.getElementsByTagName('img')[0];
+    var oIn=document.getElementById('in-box');
+    var oBigIn=document.getElementById('big-img');
+    // var smallMaxX=oSmall.offsetWidth-oIn.offsetWidth;
+    // var bigMaxX=oBig.offsetWidth-oIn.offsetWidth;
     
+
+    // var smallMaxY=oSmall.offsetHeight-oIn.offsetHeight;
+    // var bigMaxY=oBig.offsetHeight-oIn.offsetHeight;
+
+    var oImg=document.getElementById('big-img');
     oSmall.onmouseover=function(){
-        oSpan.style.display='block';
-        oBig.style.display='block';
-    }
-    oSmall.onmousemove=function(e){
-        
-            oSpan.style.left=e.clientX-oSpan.offsetWidth/2+'px';
-            oSpan.style.top=e.clientY-oSpan.offsetHeight/2+'px';
-           
-            if(oSpan.offsetLeft<=0){oSpan.style.left=0;}
-            if(oSpan.offsetLeft>=oSmall.offsetWidth-oSpan.offsetWidth){
-                oSpan.style.left=oSmall.offsetWidth-oSpan.offsetWidth+'px';
+            oBig.style.display='block';
+            oIn.style.display='block';
+            oSmall.onmousemove=function(e){
+                oIn.style.left=e.clientX-oIn.offsetWidth/2+'px';
+                oIn.style.top=e.clientY-oIn.offsetHeight/2+"px";
+                if (oIn.offsetLeft<=0) {
+                    oIn.style.left=0;
+                }
+                if (oIn.offsetLeft>=oSmall.offsetWidth-oIn.offsetWidth) {
+                    oIn.style.left=oSmall.offsetWidth-oIn.offsetWidth+'px';
+                }
+                if (oIn.offsetTop<=0) {
+                    oIn.style.top=0;
+                }
+                if (oIn.offsetTop>=oSmall.offsetHeight-oIn.offsetHeight) {
+                    oIn.style.top=oSmall.offsetHeight-oIn.offsetHeight+'px';
+                }
+                var smallMaxX=oSmall.offsetWidth-oIn.offsetWidth;
+                var smallMaxY=oSmall.offsetHeight-oIn.offsetHeight;
+                var bigMaxX=oBigIn.offsetWidth-oBig.offsetWidth;
+                var bigMaxY=oBigIn.offsetHeight-oBig.offsetHeight;
+                var percentX=oIn.offsetLeft/smallMaxX;
+                var percentY=oIn.offsetTop/smallMaxY;
+
+                
+                
+                oImg.style.top=-bigMaxY*percentY+'px';
+                oImg.style.left=-bigMaxX*percentX+'px';
+
+                
+                
+
+
+
             }
-            if(oSpan.offsetTop<=0){oSpan.style.top=0;}
-
-            if(oSpan.offsetTop >= oSmall.offsetHeight - oSpan.offsetHeight){
-                oSpan.style.top = oSmall.offsetHeight - oSpan.offsetHeight +"px";
-            }
-                        //小图能走的最大距
-            var smallMax=oSmall.offsetWidth-oSpan.offsetWidth;
-                    // 大图能走的最大距离w
-            var bigMax=oImg.offsetWidth-oBig.offsetWidth;
-                         var percent=oSpan.offsetLeft/smallMax;
-                          oImg.style.left=-percent*bigMax+'px';
-
-             var smallMaxY=oSmall.offsetHeight-oSpan.offsetHeight;
-                    // 大图能走的最大距离w
-            var bigMaxY=oImg.offsetHeight-oBig.offsetHeight;
-                         var percentY=oSpan.offsetTop/smallMaxY;
-                          oImg.style.top=-percentY*bigMaxY+'px';
-
     }
     oSmall.onmouseout=function(){
-        oSpan.style.display='none';
-        oBig.style.display='none';
+            oBig.style.display='none';
+            oIn.style.display='none';
     }
     
+    
+    
+    
     </script>
+
 </body>
 </html>

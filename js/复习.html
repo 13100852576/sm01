@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // window.onload    当资源加载完之后才引用
+
+
+    // undefined
+    // 1.定义没有赋值
+    // 2.方法没有返回值
+    // 3.数组越界
+    // 4.访问对象没有的属性
+
+
+
+    // unll 
+    // getElementById() 
+    //  取不到
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <script>
+        var person1 = {
+            name: 'sunmeng',
+            age: 22,
+            person3: {
+                name: 'baba',
+                age: 44
+            }
+
+        }
+        // var person2 = {};
+        // for (key in person1) {
+        //     // 浅克隆
+        //     person2[key] = person1[key];
+
+        // }
+
+
+
+
+        // function clone(obj) {
+        //     var result = {};
+        //     for (key in obj) {
+        //         // 深克隆
+        //         if (typeof obj[key] == 'object') {
+        //             result[key] = clone(obj[key]);
+        //         }
+        //         else {
+        //             result[key] = obj[key];
+        //         }
+        //     }
+        //     return result;
+        // }
+        //    var person2= clone(person1);
+        //     console.log(person2);
+
+
+
+
+
+         function Person(name,age){
+             this.name=name;
+             this.age=age;
+            //  this.play=function(){
+            //      console.log(this.name+'玩');
+            //  }
+
+            }
+                Person.prototype.play=function(){
+                    console.log('asdasd');
+                }
+
+
+
+            var person1=new Person('lili',21);
+            var person2=new Person('mimi',55);
+
+            console.log(person1);
+            console.log(person2);
+            person2.play();
+
+
+
+            // TYPE OF NULL     BOJECT
+            // TYPE OF A FUNCTION     FUNCTION
+
+    </script>
+
+
+</body>
+
+</html>

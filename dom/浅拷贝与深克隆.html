@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var person1={
+            name:'gc',
+            age:23,
+            sex:"women",
+            mother:{
+                name:'gcm',
+                sex:"women",
+                age:55
+            }
+        }
+       
+    function clone(obj)
+    {
+        var res={};
+        for( key in obj)
+        {
+         if(typeof obj[key]=='object')
+         {
+             res[key]=clone(obj[key]);
+         }
+         else{
+        res[key]=obj[key];
+            }
+        }
+        return res;
+    }
+
+
+
+
+     var person2=clone(person1);
+     person1.mother.age=50;
+     console.log(person2.mother.age);
+    
+
+    
+    </script>
+</body>
+</html>

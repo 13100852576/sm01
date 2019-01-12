@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">111</div>
+    <div id="div2">222</div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+    var oDiv2=document.getElementById('div2');
+    $("#div1")[0].style.color="red";
+    $("#div1").get(0).style.background="green";
+
+    $(oDiv2).css('color','red');
+    $(oDiv2).html(8888888888888888);
+    
+    </script>
+</body>
+</html>
