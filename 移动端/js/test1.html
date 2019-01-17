@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    #div2{
+        background: #9261bf;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        
+    }
+    #div1{
+        background: black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: none;
+    }
+    #cover{
+        width: 248px;
+        position: absolute;
+        left: 50%;
+        margin-left: -124px;
+    }
+    #zuiniu{
+        width: 185px;
+    position: absolute;
+    top:62%;
+    left:50%;
+    margin-left:-92px;
+    }
+    .jiantou{ width: 25px;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    margin-left: -12px;
+    }
+
+    .fromtop{
+        animation: fromtop 0.6s ease forwards;
+    }
+    @keyframes fromtop{
+        from{
+            transform: translateY(-100%);
+        }
+  
+    }
+    .fromleft{
+        animation: fromleft 0.6s ease forwards;
+    }
+    @keyframes fromleft{
+        from{
+            transform: translateX(-100%);
+        }
+    }
+    .up{
+        animation: up  2s infinite ease forwards;  
+    }
+
+    @keyframes up{
+        0%{
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+          50%{
+            opacity: 1;
+            transform: translateY(50%);
+        }
+
+          100%{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    }
+    #div2 .img1{
+    width: 158px;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    margin-left: -79px;
+}
+#div2 .img2{
+    width: 240px;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    margin-left: -120px;
+}
+#div2 .img3{
+    width: 241px;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    margin-left: -120px;
+}
+#div2 .img5{
+    width: 142px;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    margin-left: -71px;
+}
+#div2 .img7{
+    width: 248px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    margin-left: -124px;
+}
+    </style>
+</head>
+<body>
+    <script src="zepto.js"></script>
+    <script src="touch.js"></script>
+    <div id="div1">
+
+        <img id="cover" class="fromtop" src="cover.png" alt="">
+        <img id="zuiniu"  class="fromleft" src="wording_cover.png" alt="">
+        <img  class="jiantou  up" src="icon_up.png" alt="">
+    </div>  
+
+    <div id="div2">
+            <img class="img1 moveFromBottom" src="img/wording.png" />
+            <img class="img2 moveCircle" src="img/circle.png" />
+            <img class="img3 moveFromLeft " src="img/people.png" />
+            <!-- <img class="img4" src="img/dot1.png" /> -->
+            <img class="img5 moveScale" src="img/check_develop.png" />
+            <img class="jiantou" src="img/icon_up.png" />
+            <img class="img7 moveScale" src="img/floating_develop.png" />
+
+    </div>
+</body>
+</html>

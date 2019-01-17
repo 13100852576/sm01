@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    th,td,tr,table{
+        border: 1px solid black;
+        border-collapse: collapse;
+
+    }
+    th,td,tr{
+        width: 300px;
+        height: 100px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <script src="jquery-1.12.4.js"></script>
+  <table>
+
+        <tr>
+                <th colspan="2">输入即编辑</th>
+            </tr>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+            </tr>
+        
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+            </tr>
+        
+            <tr>
+                    <td>2</td>
+                    <td>李四</td>
+                </tr>
+                <tr>
+                        <td>3</td>
+                        <td>王五</td>
+                    </tr>
+        
+                    <tr>
+                            <td>4</td>
+                            <td>赵六</td>
+                        </tr>
+
+  </table>
+  <script>
+  $("td").on("click",function(){
+      if(!$(this).find("input").size()>0)
+      {
+      var $html=$(this).html();
+      $(this).html("<input></input>");
+      $(this).children().val($html);
+      $(this).children().select();
+      }
+  })
+  
+
+  $("td").on("keyup","input",function(e){
+            if(e.which==13){
+                var $val=$(this).val();
+                $(this).parent().html($val);
+            }
+  })
+  
+  
+  
+  
+  </script>
+</body>
+</html>

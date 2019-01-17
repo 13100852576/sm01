@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #b{
+        width: 200px;
+        height: 300px;
+        border: 1px solid black;
+    }
+    
+    li{
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        cursor: pointer;
+        }
+
+    ul{
+        overflow: hidden;
+    }
+  
+   #b .block{
+        display:block;
+    }
+    .color{
+        background: blue;
+    }
+    
+   #b div{
+        display: none;
+    }
+    
+    </style>
+</head>
+<body>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+
+        <div id="b">
+            <div id="1"  class="block">1</div>
+            <div id="2"  >2</div>
+            <div id="3" >3</div>
+        </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+    $("ul li").on("click",function(){
+        $(this).addClass("color").siblings().removeClass('color');
+        $("#b div").eq($(this).index()).addClass("block").siblings().removeClass("block");
+    })
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -12,6 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        .selected{
+            background: red;
+        }
         li {
             list-style: none;
             float: left;
@@ -28,13 +31,12 @@
         }
 
         #div1 {
-            border: 1px solid black;
+            border: 1px solid red;
             width: 750px;
             height: 291px;
             margin: 100px auto;
             position: relative;
             overflow: hidden;
-            background: red;
 
         }
 
@@ -44,7 +46,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            /* overflow: hidden; */
+            
 
         }
 
@@ -76,7 +78,7 @@
 <body>
     <div id="div1">
         <div id="img-box">
-            <img src="img/1.jpg" class="selected" alt="">
+            <img src="img/1.jpg" alt="">
             <img src="img/2.jpg" alt="">
             <img src="img/3.jpg" alt="">
             <img src="img/4.jpg" alt="">
@@ -89,63 +91,64 @@
         </ul>
 
         <ul id="number-ul">
-            <li class="color">1</li>
+            <li  class="selected">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
             <li>5</li>
         </ul>
         <!-- getid只能在document下面找 -->
-        <script src="../dom/jslib.js"></script>
+        <script src="jquery-1.12.4.js"></script>
+       
         <script>
-            var oBox = document.getElementById('img-box');
-            var aImg = document.getElementsByTagName('img');
-            var aNum = document.getElementById('number-ul');
-            var aLi = aNum.getElementsByTagName('li');
-            var oLeft = document.getElementById('left');
-            var oRight = document.getElementById('right');
-            var th = 0;
-
-
-            for (var i = 0; i < aLi.length; i++) {
-                aLi[i].index = i;
-                aLi[i].onclick = function () {
-                    play(this.index)
-                }
-
-            }
-            oRight.onclick = function () {
-                th++;
-                if (th == aImg.length) {
-                    th = 1;
-                    oBox.style.left = 0;
-                }
-                play(th);
-
-            }
+            var t=0;
+        $("#number-ul li").on("click",function(e){
+            t=$(this).index();
+            console.log(t);
+            $(this).addClass("selected").siblings().removeClass("selected");
+            $("#img-box").animate({
+                left:-$(this).index()*$("img").width(),
+            },500);
+            return false;
             
-            oLeft.onclick=function(){
-                th--;
-                if(th=-1){
-                    th=aImg.length-1
-                }
+        })
+
+
+        $("#right").on("click",function()
+        {
+            t++;
+            console.log(t);
+            if(t>=5)
+            {
+                t=0;
             }
-
-
-
-
-
-
-            function play(k) {
-                for (var j = 0; j < aLi.length; j++) {
-                    aLi[j].className = '';
-                }
-                aLi[k == 5 ? 0 : k].className = 'color';
-                animate(oBox, { left: -750 * k })
+            console.log(t);
+            $("#number-ul li").eq(t).addClass("selected").siblings().removeClass("selected");
+            $("#img-box").animate({
+                left:-t*$("img").width(),
+            },500)
+            return false;
+        }) 
+            
+        
+        
+        $("#left").on("click",function()
+        {
+            t--;
+            if(t<0)
+            {
+                t=4;
             }
-
-
-
+            console.log(t);
+            $("#number-ul li").eq(t).addClass("selected").siblings().removeClass("selected");
+            $("#img-box").animate({
+                left:-t*$("img").width(),
+                },500)
+        }) 
+        
+        // 祛除默认行为
+        
+        
         </script>
     </div>
 </body>
