@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Person{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        say(){
+            console.log(this.name);
+        }
+    }
+
+    // 用class声明类要有constructor
+    
+    var p1= new Person("zs",10);
+    console.log(p1);
+    
+
+    class Coder extends Person{
+        constructor(name,age,color){
+            super(name,age);
+            this.color=color;
+        }
+        coding(){
+            console.log("敲代码");
+        }
+        static eat(){
+            console,log("eat");
+        }
+    }
+
+
+    var c1=new Coder("lis",20,"格子衫")
+
+    console.log(c1);
+    c1.say();
+    c1.coding();
+    Coder.eat();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原生
+        // ajax原理
+        // 1创建XMLHTTPrequest对象
+
+         // 1 创建 XMLHttpRequest 对象
+            // var xmlhttp;
+            // if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+            //     xmlhttp = new XMLHttpRequest();
+            // } else { // code for IE6, IE5
+            //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            // }
+            // // 2.发送请求
+            // xmlhttp.open("GET", "http://127.0.0.1/meituan/welcome/product?id=2", true);
+            // xmlhttp.send();
+
+            // //3.服务器响应  每当 readyState 改变时，就会触发 onreadystatechange 事件。
+            // xmlhttp.onreadystatechange = function () {
+            //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //         var oDiv = document.getElementById('div1');
+            //         oDiv.innerHTML = xmlhttp.responseText
+            //         // console.log(xmlhttp.responseText);
+            //     }
+            // }
+        // }
+        
+        /*
+        存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+        0: 请求未初始化
+        1: 服务器连接已建立
+        2: 请求已接收
+        3: 请求处理中
+        4: 请求已完成，且响应已就绪
+
+        */
+
+        /*
+        staus状态码常见的有：
+            200 服务器成功返回
+            301 永久重定向
+            302 临时重定向
+            404 资源找不到
+            500 服务器错误
+            304 缓存
+        */
+
+        // method：请求的类型；GET 或 POST
+
+        /* 
+            get是请求  post是提交
+            get(ie2-4k)数据量小，，post很大 
+            Get 放在地址栏不安全，post是在包体里，相对安全
+            get可以缓存，post不能
+        */
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // JS类复习
+    function Person(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    Person.prototype.say=function(){
+        console.log("我的名字是"+this.name);
+    }
+    var person1= new Person("zs",20);
+    person1.say();
+    // js中原生继承
+    function Coader(name,age){
+        Person.call(this,name,age);
+        // this.shirt="格子"  新加属性
+    }
+    // 通过子类。prototype=父类的实例化对象 继承方法
+    Coader.prototype=new Person();
+    Coader.prototype.constructor=Coader;
+    console.log(Coader.prototype.constructor);
+     
+
+     var c1=new Coader("静静",18);
+     c1.say();
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <!--
+        1. 理解:
+          * Promise对象: 代表了未来某个将要发生的事件(通常是一个异步操作)
+          * 有了promise对象, 可以将异步操作以同步的流程表达出来, 避免了层层嵌套的回调函数(俗称'回调地狱')
+          * ES6的Promise是一个构造函数, 用来生成promise实例
+        2. 使用promise基本步骤(2步):
+          * 创建promise对象
+            let promise = new Promise((resolve, reject) => {
+                //初始化promise状态为 pending
+              //执行异步操作
+              if(异步操作成功) {
+                resolve(value);//修改promise的状态为fullfilled
+              } else {
+                reject(errMsg);//修改promise的状态为rejected
+              }
+            })
+          * 调用promise的then()
+            promise.then(function(
+            
+            ))
+        3. promise对象的3个状态
+          * pending: 初始化状态
+          * fullfilled: 成功状态
+          * rejected: 失败状态
+        -->
+    <script src="../jquery/jquery-1.12.4.js"></script>
+    <script>
+        
+        // 
+        // $.get('http://127.0.0.1/meituan/welcome/product?id=1',{
+        // },function(data){
+        //     // {name:'衣服','comment','001'}
+        //     var id = data.comment;
+        //     $.get('http://127.0.0.1/meituan/welcome/comment?commentid='+id,{
+
+        //     },function(data){
+        //         console.log(data);
+                
+        //     },'json');
+        // },'json')
+
+        /* promise 异步编程的一种解决方案，
+            比传统的解决方案——回调函数和事件——更合理和更强大
+        */
+
+        // 把异步的操作以同步的流程表示出来  resolve成功回调韩式 =》then
+        // 失败调用reject() => catch/then第二个回调函数
+        var p1 = new Promise(function(resolve,reject){
+            // pending 
+            $.get('http://127.0.0.1/meituan/welcome/product?id=1',{
+            },function(data){
+                // reject();
+                resolve(data.comment);  //成功调用resolve pending=> fulfilled
+                //失败调用reject  pending => rejected
+            },"json");
+        });
+        p1.then(function(id){
+            // p1成功
+            let p2 = new Promise(function(resolve){
+                $.get('http://127.0.0.1/meituan/welcome/comment?commentid='+id,{
+                },function(data){
+                    console.log(data.title);
+                    resolve();
+                },'json');
+            })
+            return p2;
+        },function(){
+            console.log('p1失败');
+        }).then(function(){
+            console.log('p2成功');
+        },function(){
+            console.log('p2失败');
+        });
+
+
+
+
+
+
+        
+    
+    </script>
+
+
+</body>
+
+</html>

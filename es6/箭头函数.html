@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+        <script>
+            a();           
+            // 函数提升 undefined
+            b();
+            // b提升 函数不提升 报错
+
+        function a(){
+                                console.log("a");
+                            }
+                            
+                            var b=function(){
+                                console,log("b");
+                            }
+        
+                        
+        // 箭头函数
+        var fn=(x)=>{
+            console.log("fn",x);
+        }
+        fn("111");
+        // 简写方式
+        var fn=x=>console.log("fn",x);
+
+
+        // 与解构的结合
+        var fn2=([x,y=4,z])=>{
+            console.log(x,y);
+        }
+        fn2([1,2,3]);
+        console.log(fn2.length);
+
+
+
+        //  箭头函数特性一   箭头函数中this指的是声明时的this即父作用域中的this
+        // 普通函数中this指的是调用时的this
+
+        // 箭头函数的两个属性
+        // length没有赋默认值的参数的个数   与解构结合时使用
+        // name箭头函数的名字
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // this指向事例
+
+
+        var oBtn = document.getElementById('btn');
+
+// oBtn.onclick = () => {
+//     console.log(this);
+// }
+// window
+
+// oBtn.onclick = function(){
+//     setTimeout(function(){
+//         console.log(this);
+//     },1000)
+// }
+// window
+
+
+// oBtn.onclick = () => {
+//     setTimeout(() => {
+//         console.log(this);
+//     },1000);
+// }
+// window
+
+// var obj = {
+//     name:'zxs',
+//     age:21,
+//     say:function(){
+//     console.log(this);
+//     }
+// }
+// obj
+
+let obj = {
+    name:'zxs',
+    age:21,
+    say:function() {
+        setTimeout(() => {
+            console.log(this.name);
+        });
+    }
+}
+obj.say();
+
+
+//  箭头函数特性二 箭头函数不能用做构造函数
+//  箭头函数特性三箭头函数不能使用arguments       取参数用。。。
+
+
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+            <li></li>
+    </ul>
+    <script>
+        var aLi=document.getElementsByTagName('li');            
+        //  类数组 节点列表
+
+    let arr=[1,2,3];
+    console.log(...arr);
+
+
+    // 作用一.复制数组
+    let a1=[1,2,3];
+    let a2=[...a1];
+    console.log(a2);
+    
+    // 作用二.合并数组
+    let a3=[1,2,3];
+    let a4=[4,5,6];
+    console.log(...a3,...a4);
+
+    // 作用三.操作类数组
+    // var aLi = document.getElementsByTagName('li'); //类数组 数组 节点类别
+        // aLi.push('x');
+        // console.log(aLi);     类数组不能调用数组方法
+        // var arr = [...aLi];
+        // arr.push('dfghj');
+        // console.log(arr);
+
+
+    //作用四 合并对象
+    let p1={
+        name:"zs",
+        age:20
+    }
+    let p2={
+        name:"lis",
+        schllo:"weichuang"
+    }
+    let p2={...p1,...p2}
+    console.log(p2);
+
+
+    // 作用五
+    // rest运算符 ...a   运用在函数的形参中  把剩余参数组合成一个数组
+     // rest运算符  返回剩余的 
+        // function fn(a,b,...rest){
+        //     console.log(rest);
+        // }
+
+
+    // arguments  函数中的参数 是一个类数组
+    // arguments.callee 函数自己
+
+
+        
+        
+        
+    </script>
+</body>
+</html>

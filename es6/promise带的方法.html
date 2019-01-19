@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jquery/jquery-1.12.4.js"></script>
+    <script>
+        
+    // var count = 0;
+    //    $.get(function(){
+    //     //    console
+    //     count++;
+    //     if()
+    //    })
+    //    $.get(function(){
+    //     count++;
+    //     if()
+    //    })
+    //    $.get(function(){
+    //     count++;
+    //     if()
+    //    })
+    let p3 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log('3 ok');
+            reject();
+        },1000);
+    })
+    let p1 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log('1 ok');
+            resolve()
+        },1000);
+    })
+    let p2 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log('2 ok');
+            resolve();
+        },3000);
+    })
+   
+    // 3个请求都成功 =>会走到then  只要有一个失败了=>走到catch
+    // Promise.all([p1,p2,p3]).then(function(){
+    //     console.log('完事了。。。');
+    // }).catch(function(){
+    //     console.log('失败了。。。');
+    // });
+    // 找到最快 最快的成功=>then  最快的失败=>catch  
+    Promise.race([p1,p2,p3]).then(function(){
+        console.log('完事了。。。');
+    }).catch(function(){
+        console.log('失败了。。。');
+    });
+
+
+
+
+
+
+
+
+
+       
+       
+
+      
+       
+        
+    
+    </script>
+
+
+</body>
+
+</html>

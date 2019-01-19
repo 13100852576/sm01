@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var name="zas";
+    var age=20;
+    
+    var obj={
+        name:name,
+        age:age,
+        say:function(){
+            console.log(this.name);
+        }
+
+    }
+    // 属性名与变量同名省略写
+    // 方法简写
+    // 属性名是一个表达式时
+    var sc="school";
+
+    var obj1={
+        name,
+        age,
+        [sc]:"weichuang",
+        say(){
+            console.log(this.name);
+        }
+    }
+    
+
+
+    // js 中NAN===NAN  是false
+    // Object.is(Nan,NaN) true
+
+
+
+    //合并对象
+    var obj={
+        name:"zs",
+        age:20
+    }
+    var obj1={
+        name:"lisi",
+        sex:"men"
+    }
+    var obj3=Object.assign(obj,obj1);
+
+
+
+    // 判断对象是否包含某个属性
+    console.log("name" in obj);
+    
+    
+    </script>
+</body>
+</html>

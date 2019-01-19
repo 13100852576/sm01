@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                    let arr=[1,2];
+                    let a=arr[0];
+                    let b=arr[1];
+                    // 也可以用var
+
+                    // 解构赋值
+                    //第一种
+                    let[a,b]=arr;
+                    console(a,b);
+                    // 第二种
+                    let arr1=[1,2,[3,4],5];
+                    let[a,b,[c,d],e]=arr1;
+                    console.log(a,b,c,d,e);
+                    // 第三种
+                    // 取不到时设置默认值
+                    let[,x,y=8]=arr;
+                    console(x,y);
+                    //  第四种 对象解构
+                    let p1={
+                        name:"zs",
+                        age:14
+                    }
+                    let{ age,name}=p1;
+                    // age与name要与属性对应
+                    console.log(age,name);
+                    // 第五种 字符串解构
+                    let str="asd";
+                    let[o,p]=str;
+                    console.log(o,p,q);
+
+        
+        </script>
+</body>
+</html>

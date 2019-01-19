@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // 类对象
+    let e=new Map();
+    e.set(name,'zs');
+
+
+   
+    // 对象作为一个属性并且赋值
+    let obj={
+        name:"zs"
+    }
+    e.set(obj,"xxx");
+
+
+     console.log(e.get('name'));
+    // e.delete('name');
+    console.log(e.has('name'));
+    // e.clear();
+    console.log(e);
+       
+
+
+    
+    
+    </script>
+</body>
+</html>

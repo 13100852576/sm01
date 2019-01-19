@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+     <div>1</div>
+     <div>2</div>
+     <div>3</div>
+     <div>4</div>
+    <script>
+    var aDiv=document.getElementsByTagName("div");
+
+
+
+    // console.log(a);
+    // var a=6;
+
+
+    // console.log(b);
+    // let b=6;
+    // 区别一    let没有变量的提升
+
+   
+    // for(let i=0;i<aDiv.length;i++){
+    //         aDiv[i].onclick=function(){
+    //             console.log(i);
+    //         }
+    // }
+    // 类似闭包
+
+
+   for(var j=0;j<aDiv.length;j++){(function(j){
+            aDiv[j].onclick=function(){
+                console.log(j);
+            }
+        })(j)}
+
+    // 闭包
+    // 区别二  let有块级作用域 var只有函数的作用域和全局作用域
+    
+
+    // 区别三   不允许重复声明let
+
+        var a=0;
+        var a=5;
+        console.log(a);
+        
+
+        let a=0;
+        let a=5;
+        console.log(a);
+
+        
+
+
+
+    // 区别四  let有临时失效区    在当前作用域不允许有同名变量进来
+
+    
+    var a = 5;
+        function fn(){
+            console.log(a);
+            let a = 10;
+        }
+        fn();
+    
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

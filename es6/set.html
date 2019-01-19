@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a=new Set([1,2,3]);
+    // 是一个类数组
+
+    // 去重作用
+        let b=[1,2,3,4,5,6,7];
+        let a=new Set(b);
+    // 祛除重复
+
+    // 标注js去除重复
+    // 一
+    var result=[];
+    for(var val of b){
+        if(!result.includes(val)){
+            result.push(val);
+        }
+    }
+    // 二
+    var result=[];
+    for(var val of b){
+        if(result.indexOf(val)==-1){
+            // 没有返回-1 有返回索引
+            result.push(val);
+        }
+    }
+    //三 双重for循环
+
+
+
+    // 方法
+     let c=new Set([1,2,3,4]);
+    //  c.add(7);
+    //  c.delete(1);
+    //  c.clear();
+    //  console.log(c.has(3));
+    // 属性
+    console.log(c.size);
+
+    </script>
+</body>
+</html>
