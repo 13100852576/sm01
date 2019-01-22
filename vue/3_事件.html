@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+            <div id="div1">
+                {{count}}
+                <button id="btn"    v-on:click="count++">click+1</button>
+                <button id="btn"    @click="action(2)">click+2</button>
+                <!-- <button id="btn"    @click="action(3,$event)">click+3</button> -->
+                <!-- 第二个参数是事件，如果有事件参数需要在函数中设置一个参数接收事件参数，并且调用，如果没有事件参数，函数中直接使用event代表事件 -->
+                <button id="btn"    @click="action(3)">click+3</button>
+                <!-- @click.stop  修饰符  阻止事件冒泡  -->
+            <!-- @click.prevent  修饰符  阻止默认行为  -->
+            </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+
+
+
+    // var v1=new Vue({
+    //     el:"#div1",
+    //     data:{
+    //         count:0
+    //     },
+    //     methods:{
+    //         action(num,e){
+    //             console.log(e);
+    //             this.count+=num
+    //         }
+    //     }
+    // })
+
+
+
+
+    var v1=new Vue({
+        el:"#div1",
+        data:{
+            count:0
+        },
+        methods:{
+            action(num){
+                console.log(event);
+                this.count+=num
+                // 方法访问参数中数据需要使用this
+            }
+        }
+    })
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

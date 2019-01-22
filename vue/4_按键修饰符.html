@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <input type="text" @keyup.enter="fn()">
+        <!-- 可以为数字 代表按键的英文单词 -->
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    
+    var v1=new Vue({
+        el:"#div1",
+        data:{
+
+        },
+        methods:{
+            fn(){
+                console.log("按下");
+            }
+        }
+    })
+    
+    </script>
+</body>
+</html>

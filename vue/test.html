@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .a{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+        <div id="div1">
+       <input type="text" v-model="inners" @keyup.enter="action()">
+       <button id="btn" @click='action()'>add</button>
+       {{inners}}
+                <ul  >
+                    
+                    <li v-for="(obj,index) in showlist"  :class='{a:obj.isA}' @click="action2(obj)">
+                        {{obj.val}}
+                        <button @click.stop='action1(index)'>del</button>
+                    </li>
+                </ul> 
+            
+        </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+        
+    var v1=new Vue({
+        el:"#div1",
+        data:{
+            inners:"",
+            list:[],
+            showlist:[],
+            isA:false
+            },
+        methods:{
+            action(){
+               this.list.push({val:this.inners,isA:false});
+               this.showlist={...this.list};
+                this.inners=''
+               
+            },
+            action1(index){
+                this.list.splice(index,1);
+                this.showlist={...this.list};
+            },
+            action2(obj){
+                obj.isA=!obj.isA
+            }
+            
+        }
+    })
+    
+    </script>
+</body>
+</html>

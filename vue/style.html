@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <!-- <div :style="{background:bg,color:col}">hahaha</div> -->
+        <!-- <div :style="obj">hahaha</div> -->
+        <div :style="[obj1,obj2]">hahaha</div>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    
+    var v1=new Vue({
+        el:"#div1",
+        data:{
+            bg:"red",
+            col:"green",
+            obj:{
+                background:"red",
+                color:"green",
+            },
+            obj1:{
+                border:" 1px solid black",
+            },
+            obj2:{
+                background:"pink",
+            }
+        }
+    })
+    
+    
+    </script>
+</body>
+</html>

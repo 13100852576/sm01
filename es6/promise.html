@@ -35,7 +35,7 @@
     <script src="../jquery/jquery-1.12.4.js"></script>
     <script>
         
-        // 
+        
         // $.get('http://127.0.0.1/meituan/welcome/product?id=1',{
         // },function(data){
         //     // {name:'衣服','comment','001'}
@@ -56,13 +56,44 @@
         // 失败调用reject() => catch/then第二个回调函数
         var p1 = new Promise(function(resolve,reject){
             // pending 
-            $.get('http://127.0.0.1/meituan/welcome/product?id=1',{
-            },function(data){
+            $.get('http://127.0.0.1/meituan/welcome/product?id=1',{ },function(data){
                 // reject();
                 resolve(data.comment);  //成功调用resolve pending=> fulfilled
                 //失败调用reject  pending => rejected
             },"json");
         });
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
         p1.then(function(id){
             // p1成功
             let p2 = new Promise(function(resolve){
@@ -73,11 +104,14 @@
                 },'json');
             })
             return p2;
-        },function(){
+        }
+        // 成功
+        ,function(){
             console.log('p1失败');
-        }).then(function(){
-            console.log('p2成功');
-        },function(){
+        // 失败
+        })
+        
+        .then(function(){console.log('p2成功');},    function(){
             console.log('p2失败');
         });
 

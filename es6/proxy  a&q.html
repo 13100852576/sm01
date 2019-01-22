@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 监听对象
+        // var obj = {
+        //     name:'zs',
+        //     age:20
+        // }
+
+        // console.log(obj.name);
+        // obj.age = 10;
+        // console.log(obj);
+
+        // var pro = new Proxy(obj,{
+        //     set:function(target,key,value,pro){
+        //         console.log('set。。。');
+        //         console.log(target,key,value,pro);
+        //         // pro意义
+        //         target[key] = value;
+        //     },
+        //     get(target,key,pro){
+        //         // console.log(target,key,property);
+        //         // console.log('aaa');
+        //         console.log('访问量obj的'+key+'属性');
+        //         return target[key];
+        //     }
+        // });
+        // console.log(pro.name);
+        // // 闯、输出在哪
+        // pro.age = 50;
+        // console.log(obj);
+
+
+        // 监听函数
+            function fn(arg){
+            console.log(this);
+            console.log('fn',arg);
+        }
+        var p1 = new Proxy(fn,{
+            // apply方法可以接受三个参数，
+            // 分别是目标对象、目标对象的上下文对象（this）和目标对象的参数数组。
+            apply(target,b,c){
+                console.log(target,b,c);
+                
+                return Reflect.apply(...arguments);
+            }
+        })
+        p1('xxx');
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>
