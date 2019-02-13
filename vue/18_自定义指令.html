@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div v-fn="  'red'   ">
+
+                div
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        Vue.directive("fn",{
+            bind:function(elem,obj){
+                elem.style.color=obj.value;
+            }
+        });
+    
+
+        var v1= new Vue({
+            el:"#div1",
+            data:{
+
+            }
+        })
+    
+    
+    
+    
+    
+    
+    </script>
+    </body>
+</html>

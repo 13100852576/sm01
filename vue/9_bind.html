@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #div1{
+        color:red;
+    }
+    .a{
+        background: green;
+    }
+    .b{
+        color:hotpink;
+    }
+    
+    
+    </style>
+</head>
+<body>
+            <div id="div0">
+            <div v-bind:id="msg">
+
+                div1
+            </div>
+
+            <!-- class特殊 -->
+            <!-- 方式一 -->
+            <div :class="[a,b]">div2</div>
+            <!-- 方式二 -->
+            <div :class="{a:isA,b:isB}">div3</div>
+            </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+    var v1=new  Vue({
+        el:"#div0",
+        data:{
+                msg:"div1",
+                isA:true,
+                isB:false,
+                a:"a",
+                b:"b"
+        }
+    })
+    
+    </script>
+    
+</body>
+</html>

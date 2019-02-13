@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="msg++">add</button>
+        <button @click="del()">del</button>
+        {{msg}}
+    </div>
+    
+    <script src="vue.js"></script>
+    <script>
+        // vm.$el
+        // vm.$data
+        // vm.msg
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:0
+            },
+            methods:{
+                del(){
+                    vm.$destroy();
+                }
+            },
+            // 
+            beforeCreate () {
+                console.log(this.$data,this.$el);
+            },
+        //  vue刚刚被创建 
+            created () {
+                console.log(this.$data,this.$el);
+            },
+            // vue属性已经绑定  dom未生成 el不存在
+        // 
+            beforeMount () {
+                console.log(this.$data,this.$el);
+            },
+        // el已经存在 但是未挂载
+            mounted() {
+                console.log(this.$el);
+            },
+        // 挂载完毕
+            beforeUpdate () {
+                // console.log(this.$el);
+                console.log('beforeUpdate');
+            },
+        // 组件属性更新之前
+            updated () {
+                console.log('updated');
+                // console.log(this.$el);
+            },
+        // 组件属性更新之后
+            beforeDestroy() {
+                console.log('beforeDestroy');
+            },
+        // 组件销毁之前
+            destroyed() {
+                console.log('destroyed');
+            }
+        // 组件销毁之后
+        });
+    
+    </script>
+</body>
+</html>

@@ -12,10 +12,15 @@
                 <div v-if="a">true</div>
                 <div else>false</div>
                 <div v-if="b=='x'">xxxx</div>
-                <div v-if="b=='y'">yyyy</div>
+                <div v-else-if="b=='y'">yyyy</div>
                 <div v-else>zzzz</div>
-                <div></div>
-                <div></div>
+
+                
+
+
+
+                <div v-show='a'>qqqq</div>
+                <div v-show='b=="x"'>www</div>
     
 
 

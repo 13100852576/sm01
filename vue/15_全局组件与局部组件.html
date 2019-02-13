@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    
+    
+    </style>
+</head>
+<body>
+        <div id="app">
+            <div id="div1">
+                div1
+                <zujian1></zujian1>
+                <br>
+            </div>
+            <div id="div2">
+                div2
+                    <zujian1></zujian1>
+
+                    <zujian2 name="sun"></zujian2>
+            </div>
+        </div>
+
+
+
+    <script src="vue.js"></script>
+    <script>
+            Vue.component('zujian1',{
+                template:"<h1>组件1</h1>"
+            })
+            // 全局组件
+
+    var v1=new Vue({
+            el:"#div2",
+            data:{
+            
+            },
+            components:{
+                // 非全局组件
+                // 这里要加s
+                "zujian2":{
+                    template:"<h2>{{name}}</h2>",
+                    props:['name']
+                }
+            }
+
+    })
+    var v2=new Vue({
+            el:"#div1"
+    })
+    
+    
+    </script>
+    
+</body>
+</html>

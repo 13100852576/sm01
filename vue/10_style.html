@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    
+    
+    
+    </style>
+</head>
+<body>
+            <div id="div0">
+                        <!-- <div  :style='{background:bck,color:col}'>div1</div> -->
+                        <!-- <div :style="obj">div1</div> -->
+                        <!-- <div :style="[obj,obj2]">div1</div> -->
+                        <div  :style="{background:bck}">div1</div>
+
+
+
+            </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+    var v1=new Vue({
+        el:"#div0",
+        data:{
+            bck:"red",
+            col:"blue",
+            obj:{
+           background:"red",
+           color:"blue"
+        },
+
+            obj2:{
+                border: "1px  solid black"
+            }
+        },
+        
+    })
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

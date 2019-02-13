@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li{
+        list-style: none;
+        width: 500px;
+        height: 50px;
+        background: blue;
+        border: 1px solid black;
+    }
+    .red{
+        background: red !important;
+
+    }
+    </style>
+</head>
+<body>
+     <div id="container">
+        名字:<input type="text" placeholder="请输入产品名" v-model="name">  价格: <input type="text" placeholder="请输入价格" v-model="price">
+        <button @click="add()">添加</button>
+        <br>
+        <input type="text" placeholder="请输入搜索内容" v-model="msg">   <button @click="filter()">搜索</button>
+        <ul>
+        <li v-for="(obj,index) in showprolist" :class='{red:obj.isred}'   @click='change(obj)'>
+        <input type="checkbox"  v-model="obj.isred">
+        {{obj.name}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{obj.price}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x]
+        </li>
+
+        </ul>
+        <br>
+        <button @click='del(index)'>删除选中</button> 总价：
+
+     </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+        var v1=new Vue({
+            el:"#container",
+            data:{
+                prolist:[
+                {
+                    name:"裤子",
+                    price:"100",
+                    isred:false
+                    
+                },
+                {
+                    name:"上衣",
+                    price:"50",
+                    isred:false
+                    
+                }],
+                showprolist:[
+                {
+                    name:"裤子",
+                    price:"100",
+                    isred:false
+                    
+                },
+                {
+                    name:"上衣",
+                    price:"50",
+                    isred:false
+                    
+                }],
+              
+                name:"",
+                price:"",
+                msg:""
+            },
+            methods:{
+                add()
+                {
+                    this.prolist.push({
+                        name:this.name,
+                        price:this.price,
+                        isred:false
+                        }
+                        )
+                    this.showprolist=[...this.prolist]
+                },
+                filter()
+                {
+                   var arr= this.prolist.filter((obj,index)=>{
+                            return obj.name.includes(this.msg)
+                    });
+                    this.showprolist=arr;
+                },
+                change(obj)
+                {
+                    obj.isred=!obj.isred;
+                    this.prolist=this.showprolist;
+                },
+                del(index){
+                            this.showprolist.splice(index,1);
+                            this.prolist=[...this.showprolist];
+                }
+
+
+            }
+        })
+    
+    
+    </script>
+</body>
+</html>

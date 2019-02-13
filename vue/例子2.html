@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 600px;
+            height: 100px;
+            background: green;
+            border: 1px solid black;
+
+        }
+
+        #div1.red {
+            background: red !important;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div0">
+        <div id="div1" v-for="(obj,index) in divx" @click="action(obj)" :class="{red:obj.isRed}">
+            {{obj.val}}
+        </div>
+        {{total}}
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        var v1 = new Vue({
+            el: "#div0",
+            data: {
+                divx: [{
+                    val: 123,
+                    isRed: false
+                },
+                {
+                    val: 542,
+                    isRed: false
+                },
+                {
+                    val: 157,
+                    isRed: false
+                },
+                {
+                    val: 936,
+                    isRed: false
+                },
+                {
+                    val: 864,
+                    isRed: false
+                }
+                ],
+                total: 1
+            },
+
+
+
+
+            methods: {
+                action(obj) {
+                  
+                    if (obj.isRed == false) {
+                        this.total = this.total + obj.val;
+
+
+                    }
+                    else {
+                        this.total = this.total - obj.val;
+                    
+
+                    }
+
+                    obj.isRed = !obj.isRed;
+
+                }
+
+
+
+            }
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

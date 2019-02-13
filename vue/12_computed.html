@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            {{name}}
+        </div>
+        <button @click='change()'>firstname</button>
+        <button @click='change2()'>lastname</button>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var v1=new Vue({
+            el:"#div1",
+            data:
+            {
+                firstname:"sun",
+                lastname:"meng",
+                names:"name"
+            },
+
+
+
+
+            computed:
+            {
+                // 属性
+                name(){
+                   return this.firstname+" "+this.lastname;
+                //      属性中内容值发生变化 name更新
+                }
+            },
+
+            methods:
+            {
+                change()
+                {
+                    this.firstname="xxxx"
+                },
+                change2()
+                {
+                    this.lastname="yyyy"
+                },
+            },
+
+            watch:{
+                // 属性值发生变化就执行方法
+                firstname:function(){
+                    console.log("first");
+
+                },
+                lastname:function(){
+                    console.log("last");
+                }
+            }
+
+
+        })
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

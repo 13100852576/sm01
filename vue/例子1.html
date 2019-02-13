@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .a{
+                color:red;
+            }
+    
+    </style>
+</head>
+<body>
+
+
+    <div id="div0">
+        <input type="text" v-model="msg" @keyup="filter()" >
+        <button  id="btn"  @click='add(msg)'>add</button>
+
+        <ul>
+            <li v-for="(obj,index) in  showlist" :class="{a:obj.isA}" @click="change(obj)">
+                {{obj.val}}
+                <button id="btn2"  @click="del(index)">del</button>
+            </li>               
+
+        </ul>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+    var v1=new Vue({
+        el:"#div0",
+        data:
+        {
+            list:[
+            {
+                val:"a",
+                isA:false
+            }],
+
+            showlist:[{
+                val:"b",
+                isA:false
+            }],
+
+            msg:""
+        },
+        methods:{
+            add(obj)
+            {
+                    this.list.push({
+                    val:this.msg,
+                    isA:false
+                })
+                console.log(this.list);
+                this.showlist=this.list;
+                this.msg="";
+            },
+            del(index)
+            {
+                this.list.splice(index,1);
+                this.showlist=this.list;
+
+            },
+            change(obj)
+            {
+                obj.isA=!obj.isA
+            },
+            filter(){
+                // this问题
+                // this在一个函数中 this指向window 用箭头函数使得他指向父作用域中
+                var arr=this.list.filter((obj)=>{
+                    return  obj.val.includes(this.msg);
+                });
+                this.showlist=arr;
+
+                }   
+             
+
+            }
+
+          
+
+        }
+       
+
+        
+    )
+    
+    
+    </script>
+    
+</body>
+</html>
