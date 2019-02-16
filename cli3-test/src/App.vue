@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+      <button @click="prev()">上一页</button>
+      <button @click='goHome()'>主页面</button>
+      <button @click='next()'>下一页</button>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <!-- <router-link to="/about">About</router-link>  | -->
@@ -11,7 +14,9 @@
 
 
     </div>
-    <router-view/>
+    <transition name='a'>
+   <router-view/>
+   </transition>
   </div>
 </template>
 
@@ -35,4 +40,26 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+/* .fade-enter{
+  opacity:0;
+}
+.fade-enter-to{
+  opacity:1;
+}
+.fade-enter-active{
+  transition: opacity 2s ease;
+} */
+
+.a-enter{
+
+  transform: translateX(-100%);
+}
+.a-enter-active{
+  transition: transform 1s ease;
+}
+.a-enter-to{
+ 
+  transform: translateX(0);
+}
+
 </style>
