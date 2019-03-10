@@ -1,0 +1,87 @@
+{
+  "albums": [
+    {
+      "name": "习近平主席出席政协会议开幕会议，并看望代表",
+      "id": 19723713,
+      "bg": "./img/xijinping.jpg"
+    },
+    {
+      "name": "两会在北京召开",
+      "id": 19723756,
+      "bg": "./img/lianghui.jpg"
+    },
+    {
+      "name": "流浪地球大卖",
+      "id": 19723757,
+      "bg": "./img/earth.jpg"
+    },
+    {
+      "name": "华为mateX亮相",
+      "id": 19723758,
+      "bg": "./img/huawei.jpg"
+    },
+    {
+      "name": "李克强做政府工作报告",
+      "id": 19723759,
+      "bg": "./img/likeqiang.jpg"
+    },
+    {
+      "name": "国防部发布消息，海军将举行庆祝海军成立七十周年活动",
+      "id": 19723750,
+      "bg": "./img/navy.jpg"
+    },
+    {
+      "name": "退役军人服务部门挂牌建立",
+      "id": 19723755,
+      "bg": "./img/pla.jpg"
+    },
+    {
+      "name": "NBA首轮季后赛开打",
+      "id": 19723754,
+      "bg": "./img/nba.jpeg"
+    },
+    {
+      "name": "东部战区陆军某部展开实战化训练",
+      "id": 19723753,
+      "bg": "./img/pla2.jpg"
+    },
+    {
+      "name": "两会代表通道",
+      "id": 19723752,
+      "bg": "./img/daibiaotongdao.jpg"
+    },
+    {
+      "name": "J20惊艳亮相",
+      "id": 19723723,
+      "bg": "./img/j20.jpg"
+    },
+    {
+      "name": "金正恩抵达平壤受到热烈迎接",
+      "id": 19723711,
+      "bg": "./img/jinzhengen.jpg"
+    },
+    {
+      "name": "聚焦两会",
+      "id": 19723790,
+      "bg": "./img/lianghuijujiao.jpg"
+    },
+    {
+      "name": "解放军代表团步入会场",
+      "id": 19723733,
+      "bg": "./img/pladaibiaotuan.jpg"
+    },
+    {
+      "name": "人民大会堂灯光异彩",
+      "id": 19723713,
+      "bg": "./img/renmindahuitang.jpg"
+    },
+    {
+      "name": "金特会晤结束，结果不如人意",
+      "id": 19723713,
+      "bg": "./img/telangpu.jpeg"
+    }
+    
+
+   
+  ]
+}

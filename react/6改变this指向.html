@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var p=function(a,b){
+                console.log(this,a,b);
+
+            }
+            p();
+
+
+            var q={
+                name:'zs'
+            }
+
+            p.call(q,1,2);
+            p.apply(q,[2,3]);
+            p.bind(q,1,2)();
+            // 加小括号之后才执行
+
+</script>
+</body>
+</html>

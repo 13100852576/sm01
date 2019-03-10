@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="div1"></div>
+        <script src="react.development.js"></script>
+        <script src="react-dom.development.js"></script>
+        <script src="browser.min.js"></script>
+        <script type="text/babel">
+    
+            let Mycomponent=(props)=>{
+                return (
+                    <div>
+                        
+                    <h1>{props.title}</h1>
+                    <p>{props.title2}</p>  
+                  <p>{props.children}</p>  
+                        
+                    </div>
+                )
+            }
+
+
+
+            ReactDOM.render(<Mycomponent title='as'  title2='asdasd'  >
+                
+                        内部
+                </Mycomponent>,document.getElementById('div1'))
+    
+    
+    
+        </script>
+
+
+    
+</body>
+</html>

@@ -34,6 +34,11 @@ export default {
           path: "/photo",
           name: "图片",
           bg: "pink"
+        },
+        {
+          path: "/book",
+          name: "图书",
+          bg: "green"
         }
       ],
       

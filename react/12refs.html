@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+
+            class  Mycomponent extends React.Component{
+                constructor(params){
+                    super(params);
+                    this.Handler=this.Handler.bind(this)
+                }
+                
+                Handler(){
+                    console.log(this.refs.p.id);
+                    console.log(this.xx);
+                }
+
+                
+                render(){
+                    return (
+                        <div>
+                        <p id='asdasdasd' ref='p'>1111111111</p>
+                        
+
+                        <p id='asdasdasd' ref={p=>{this.xx=p}}></p>
+
+                        <button onClick={this.Handler}>22222222222222222222</button>
+                        </div>
+                    )
+                }
+
+
+
+            }
+
+
+
+            ReactDOM.render(<Mycomponent  >
+          
+                </Mycomponent>,document.getElementById('div1'))
+    
+    
+    
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+class Main extends React.Component{
+
+constructor(params) {
+    super(params);
+    this.state = {
+        opacity:1,
+        color:'red',
+    },
+    this.changeH=this.changeH.bind(this);
+    this.stopH=this.stopH.bind(this);
+    this.unmount=this.unmount.bind(this);
+}
+changeH(){
+    this.setState({
+        color:'green'
+    })
+}
+stopH(){
+    clearInterval(this.timer);
+}
+componentWillMount(nextProps, nextState){
+                console.log('组件将要挂载',nextProps,nextState);
+            }
+componentDidMount(){
+                console.log('组件已经挂载');
+                this.timer=setInterval(() => {
+                    if(this.state.opacity<=0){
+                        this.setState({
+                        opacity:1
+                    })
+                    }else{
+                    this.setState({
+                        opacity:this.state.opacity-0.1
+                    })
+                    }
+                console.log('asd');
+                }, 200);
+            }
+shouldComponentUpdate(){
+    console.log('是否应该更改');
+        return true;
+}
+componentWillUpdate(){
+    console.log('组件将要更改');
+}
+componentDidUpdate(){
+    console.log('组件已经更改');
+}
+unmount(){
+    ReactDOM.unmountComponentAtNode(document.getElementById('root'));
+    console.log('组件已经被卸载');
+}
+
+render() {
+    console.log('render...');
+    let stl=
+        this.state
+    
+    return(
+        <div>
+        <p style={stl}>
+        哈哈哈哈哈哈
+        </p>
+        <button onClick={this.changeH}>变色</button>
+        <button onClick={this.stopH}>停止</button>
+        <button onClick={this.unmount}>组件卸载</button>
+        </div>
+    )
+}
+
+
+}
+ReactDOM.render(
+    <Main></Main>,document.getElementById('root')
+);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -8,10 +8,13 @@
 </head>
 <body>
     <div id="div1">
-        <input type="text" @keyup.enter="fn()">
+        <input type="text" @keyup.enter="fn($event)">
         <!-- 可以为数字 代表按键的英文单词 -->
     </div>
+
     <script src="vue.js"></script>
+
+
     <script>
     
     var v1=new Vue({
@@ -20,8 +23,9 @@
 
         },
         methods:{
-            fn(){
+            fn(e){
                 console.log("按下");
+                console.log(e.target.value);
             }
         }
     })

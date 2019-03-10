@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+
+         class Main extends React.Component{
+            constructor(params) {
+                super(params);
+                this.state = {
+                    list:['吃饭','睡觉','打豆豆']
+                }
+                this.addHandler=this.addHandler.bind(this);
+            }
+
+            addHandler(val){
+               var list1=[...this.state.list];
+                list1.push(val);
+                console.log(list1);
+                this.setState({
+                    list:list1
+                });
+                console.log(this.state.list);
+               
+            }
+
+
+             render(){
+                 return(
+                     <div>
+                                mian  
+                                <Sub1 addHandler={this.addHandler}></Sub1>  
+                                <Sub2  list={this.state.list}></Sub2> 
+                    </div>
+                 )
+             }
+         }
+
+
+         class Sub1 extends React.Component{
+            constructor(params) {
+                super(params);
+                this.add=this.add.bind(this);
+            }
+            add(){
+                if(this.myinput.value){
+                // 调用mian组件addHandler  添加一条数据
+                this.props.addHandler(this.myinput.value);
+                // 清空输入框
+                this.myinput.value='';}
+            }
+             render(){
+                 return(
+                     <div>
+                        <input type='text'  ref={input=>{this.myinput=input}}/>
+                        <button onClick={this.add}>add</button>
+                    </div>
+                 )
+             }
+         }
+
+
+         class Sub2 extends React.Component{
+             render(){
+                 return(
+                     <ul>
+                  {
+                    this.props.list.map(
+                        function (val,index) {
+                            return <li key={index}>{val}</li>
+                        }
+                    )
+                  }
+                    </ul>
+                 )
+             }
+         }
+         
+
+        ReactDOM.render(<Main></Main>,document.getElementById('div1'));
+    
+    
+        </script>
+
+
+
+</body>
+
+</html>

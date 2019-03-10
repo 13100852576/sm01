@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="container">
-      <li v-for="(obj,index)  in  movieList " :key="index">
+      <li v-for="(obj,index)  in  movieList " :key="index" @click="godetail(obj.id)">
         <img :src="obj.images.small" alt>
         <div class="info">
           <h3>{{obj.title}}</h3>
@@ -17,8 +17,9 @@
         </div>
       </li>
     </ul>
-      <img class="loading" v-show="isShow" src="@/imgs/loading.gif" alt="">
-        <div v-show="isBottom">到底了</div>
+
+    <img class="loading" v-show="isShow" src="@/imgs/loading.gif" alt>
+    <div v-show="isBottom">到底了</div>
   </div>
 </template>
 
@@ -28,13 +29,12 @@ export default {
   data() {
     return {
       movieList: [],
-       isShow:false,
-      isBottom:false
-    }
+      isShow: false,
+      isBottom: false
+    };
   },
   created() {
-
-    this.getMovie()
+    this.getMovie();
     window.onscroll = () => {
       // 滚动条滚动的高度
       console.log(document.documentElement.scrollTop);
@@ -45,31 +45,36 @@ export default {
       if (
         document.documentElement.scrollTop +
           document.documentElement.clientHeight ==
-        document.documentElement.scrollHeight&& !this.isBottom
+          document.documentElement.scrollHeight &&
+        !this.isBottom
       ) {
         this.getMovie();
       }
-    }
+    };
   },
   methods: {
-
     getMovie() {
-      this.isShow=true;
+      this.isShow = true;
       Axios.get(
         "https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/top250?start=" +
-            this.movieList.length +
+          this.movieList.length +
           "&count=10"
-        ).then((result) => {
+      )
+        .then(result => {
           console.log(result.data.subjects);
           this.movieList = [...result.data.subjects, ...this.movieList];
-          this.isShow=false;
-          if(this.movieList.length == result.data.total){
-                        this.isBottom = true;
-                    }
-        }).catch();
+          this.isShow = false;
+          if (this.movieList.length == result.data.total) {
+            this.isBottom = true;
+          }
+        })
+        .catch();
+    },
+    godetail(id){
+        this.$router.push('/detail/'+id);
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -88,12 +93,12 @@ li img {
   flex-grow: 1;
   margin-left: 0.2rem;
 }
- .loading{
-        position: fixed;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
-        width:1rem;
-        height:1rem;
-    }
+.loading {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+}
 </style>

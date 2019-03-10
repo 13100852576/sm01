@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .red{
+            background: #ff0000;
+            color: #0000ff;
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+                <div id="div1"></div>
+                <script src="react.development.js"></script>
+                <script src="react-dom.development.js"></script>
+                <script src="browser.min.js"></script>
+                <script type="text/babel">
+
+                class MyComponent extends React.Component{
+                    constructor(){
+                        super();
+                        this.state={
+                            msg:''
+                        }
+                        this.change=this.change.bind(this);
+                    }
+
+                    change(e){
+                       console.log(e.target.value);
+                       this.setState({
+                           msg:e.target.value
+                       })
+                    }
+
+                    render() {
+                        return(
+                            <div>
+                            <input    onChange={this.change}   />   
+                            <p className="red">{this.state.msg}</p> 
+                            </div>
+                        )
+                    }
+                }
+            
+                ReactDOM.render(<MyComponent></MyComponent>,document.getElementById('div1'));
+            
+            
+                </script>
+        
+        
+            
+        </body>
+        </html>
+</body>
+</html>
