@@ -10,6 +10,7 @@ G2048.prototype = {
 		this.moveAble = false;
 		$("#score").html("分数：0");
 		$(".number_cell").remove();
+		// 清除所有的格子
 		this.creatArr();
 	},
 	creatArr:function(){
@@ -110,6 +111,9 @@ G2048.prototype = {
 		for (i = 0; i < 4; i++) {
 			n = 3;
 			for (j = 3; j >= 0; j--) {
+               
+                // console.log(i,j);
+               
 				if(this.arr[i][j].value==0){					
 					continue;
 				}
@@ -118,13 +122,17 @@ G2048.prototype = {
 				while(k<=n){
 					if(this.arr[i][k].value == 0){
 						if(k == n || (this.arr[i][k+1].value!=0 && this.arr[i][k+1].value!=this.arr[i][j].value)){
-							this.moveCell(i,j,i,k);
+                            this.moveCell(i,j,i,k);
+                           
 						}
 						k++;
 						
 					}else{
 						if(this.arr[i][k].value == this.arr[i][j].value){
-							this.mergeCells(i,j,i,k);
+                            this.mergeCells(i,j,i,k);
+                            console.log(i,j);
+                            console.log(i,k);
+                            console.log("-----");
 							n--;
 						}
 						break aa;
@@ -286,3 +294,7 @@ function getRandom(n){
 
 var g = new G2048();
 g.init();
+
+
+
+
