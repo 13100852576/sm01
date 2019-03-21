@@ -7,12 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-        <button id="btn">btn</button>
+       <ul>
+           <li>1</li>
+           <li>2</li>
+           <li>3</li>
+           <li>4</li>
+       </ul>
     <script>
-    var b='12asd';
-    document.write(parseInt(b)+'</br>');//将字符串转换为整数返回，从前往后找，找到能转换成整数类型的，将其转换为整数类型
-    document.write(parseFloat(b)+'</br>');
-    //将字符串转换为小数返回，从前往后找，找到能转换成小数类型的，将其转换为小数类型
+    
+    
+    var aLi=document.getElementsByTagName("li");
+    for(var i=0;i++;i<aLi.length){
+       
+        console.log(i);
+    }
+   
 
     </script>
   

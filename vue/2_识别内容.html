@@ -7,12 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-            <!-- <div id="div1" v-html='msg'>
-
+            <!-- <div id="div1" v-text='msg'>
+                        
+                不能识别标签
                 {{msg}}
 
             </div> -->
-            <div id="div1" v-text='msg'>
+            <div id="div1" v-html="msg">
+                <!-- 可以识别标签 -->
 
                     {{msg}}
                     

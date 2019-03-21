@@ -11,11 +11,11 @@
 <body>
     <div id="div1">
         {{count}}
-        <button id="btn" v-on:click="count++">click+1</button>
-        <button id="btn" @click="action(2,$event)">click+2</button>
+        <button id="btn" @click="count++">click+1</button>
+        <!-- <button id="btn" @click="action(2,$event)">click+2</button> -->
         <!-- <button id="btn"    @click="action(3,$event)">click+3</button> -->
         <!-- 第二个参数是事件，如果有事件参数需要在函数中设置一个参数接收事件参数，并且调用，如果没有事件参数，函数中直接使用event代表事件 -->
-        <button id="btn" @click="action(3,$event)">click+3</button>
+        <!-- <button id="btn" @click="action(3,$event)">click+3</button> -->
         <!-- @click.stop  修饰符  阻止事件冒泡  -->
         <!-- @click.prevent  修饰符  阻止默认行为  -->
     </div>
@@ -27,7 +27,8 @@
 
 
         var v1=new Vue({
-            el:"#div1",
+            el:"#div1",  
+            // 挂载元素
             data:{
                 count:0
             },
