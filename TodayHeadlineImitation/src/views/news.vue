@@ -29,11 +29,11 @@ export default {
     this.getMusic();
         window.onscroll = () => {
       // 滚动条滚动的高度
-      console.log(document.documentElement.scrollTop);
+      // console.log(document.documentElement.scrollTop);
       // 可视区的高度
-      console.log(document.documentElement.clientHeight);
+      // console.log(document.documentElement.clientHeight);
       // 整个滚动区的高度
-      console.log(document.documentElement.scrollHeight);
+      // console.log(document.documentElement.scrollHeight);
       if (
         document.documentElement.scrollTop +
           document.documentElement.clientHeight ==
@@ -50,7 +50,7 @@ export default {
       this.isShow = true;
       Axios.get("data/newslist.json")
         .then(result => {
-          console.log(result.data.albums);
+          // console.log(result.data.albums);
            this.newsList = [...result.data.albums, ...this.newsList];
           this.isShow = false;
         })

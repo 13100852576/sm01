@@ -11,21 +11,24 @@ import photodetail from './views/photodetail.vue'
 
 Vue.use(Router);
 
-export default new Router({
+const router= new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/news',
-      component: news
+      component: news,
+      name:"新闻"
     },
     {
       path: '/movie',
-      component: movie
+      component: movie,
+      name:"电影"
     },
     {
       path: '/photo',
-      component: photo
+      component: photo,
+      name:"图片"
     },
     
     {
@@ -47,3 +50,29 @@ export default new Router({
     }
   ],
 });
+router.beforeEach((to, from, next) => {　　
+
+    console.log("全局守卫");
+    console.log(to);
+    console.log(from);
+    console.log("全局守卫")　　
+    
+    if(from.name==null){
+      console.log("页面初始");
+      next()  
+    }
+    else if(to.name==from.name){
+      console.log("没有发生页面的跳转");
+      
+    }else{
+      console.log("发生了页面的跳转");
+      next()  
+    }
+
+ 
+  
+  　　
+  });
+
+
+  export default  router;

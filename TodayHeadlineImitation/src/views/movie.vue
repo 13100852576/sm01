@@ -37,11 +37,11 @@ export default {
     this.getMovie();
     window.onscroll = () => {
       // 滚动条滚动的高度
-      console.log(document.documentElement.scrollTop);
+      // console.log(document.documentElement.scrollTop);
       // 可视区的高度
-      console.log(document.documentElement.clientHeight);
+      // console.log(document.documentElement.clientHeight);
       // 整个滚动区的高度
-      console.log(document.documentElement.scrollHeight);
+      // console.log(document.documentElement.scrollHeight);
       if (
         document.documentElement.scrollTop +
           document.documentElement.clientHeight ==
@@ -61,7 +61,7 @@ export default {
           "&count=10"
       )
         .then(result => {
-          console.log(result.data.subjects[0].images);
+          // console.log(result.data.subjects[0].images);
           this.movieList = [...result.data.subjects, ...this.movieList];
           this.isShow = false;
           if (this.movieList.length == result.data.total) {
