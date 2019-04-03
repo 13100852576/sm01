@@ -50,29 +50,11 @@ const router= new Router({
     }
   ],
 });
-router.beforeEach((to, from, next) => {　　
-
-    console.log("全局守卫");
-    console.log(to);
-    console.log(from);
-    console.log("全局守卫")　　
-    
-    if(from.name==null){
-      console.log("页面初始");
-      next()  
-    }
-    else if(to.name==from.name){
-      console.log("没有发生页面的跳转");
-      
-    }else{
-      console.log("发生了页面的跳转");
-      next()  
-    }
 
  
   
   　　
-  });
+
 
 
   export default  router;

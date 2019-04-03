@@ -15,23 +15,28 @@
         <ul >
             <li v-for='val in arr'>{{val}}</li>
         </ul>
+        {{arr}}
+        {{a}}
     </div>
     <script src="vue.js"></script>
     <script>
             var vm=new Vue({
                 el:"#div1",
                 data:{
-                    arr:[1,2,3,4]
+                    arr:[1,2,3,4],
+                    a:11
+            
                 },
                 methods:{
                     change(){
-                        // this.arr[1]=666
-                        Vue.set(this.arr,1,666);
+                        this.arr[1]=111;
+                        this.a=12;
+                        // Vue.set(this.arr,1,666);
                         // vue中数组不能通过索引改变数组中的值
                     }
                 },
             })
-    
+        vm.change();
     </script>
 </body>
 </html>

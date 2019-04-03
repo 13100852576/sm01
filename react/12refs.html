@@ -18,13 +18,13 @@
             class  Mycomponent extends React.Component{
                 constructor(params){
                     super(params);
-                    this.Handler=this.Handler.bind(this)
+                    this.Handler=this.Handler.bind(this);
                 }
                 
-                Handler(){
-                    console.log(this.refs.p.id);
-                    console.log(this.xx);
-                }
+                // Handler(){
+                //     console.log(this.refs.p.id);
+                //     console.log(this.myInput.value);
+                // }
 
                 
                 render(){
@@ -32,23 +32,18 @@
                         <div>
                         <p id='asdasdasd' ref='p'>1111111111</p>
                         
-
-                        <p id='asdasdasd' ref={p=>{this.xx=p}}></p>
+                        <input type="text"  ref={input=>{this.myInput=input}>
+                        // <p id='asdasdasd' ref={p=>{this.p=p}}></p>
 
                         <button onClick={this.Handler}>22222222222222222222</button>
                         </div>
                     )
-                }
+                
 
 
 
-            }
-
-
-
-            ReactDOM.render(<Mycomponent  >
-          
-                </Mycomponent>,document.getElementById('div1'))
+            
+            ReactDOM.render(<MyComponent></MyComponent>,document.getElementById('div1'));
     
     
     

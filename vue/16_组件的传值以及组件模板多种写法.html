@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    #div9{
-        width: 300px;
-        height: 300px;
-        background: red;
-    }
-    
+        #div9 {
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
     </style>
 </head>
+
 <body>
-        <div id="div1">
+    <div id="div1">
         <zujian1 name="第一个组件">
             <h1 slot="slot1">
                 slot1
@@ -23,13 +24,13 @@
             <!-- 为slot赋值 -->
 
             <div slot="slot2">
-                    <div id="div9">slot2</div>
+                <div id="div9">slot2</div>
             </div>
 
             <!-- 默认情况下写在组件中的为slot,但是需要有多个slot的话 就需要为slot标志 -->
         </zujian1>
 
-        </div>
+    </div>
 
 
     <script src="vue.js"></script>
@@ -44,32 +45,33 @@
 
     <template id="tem">
         <div>
-        <div>{{name}}</div>
-       <slot name="slot1">我是默认内容1</slot>
-       <!-- slot占位 -->
-       <slot name="slot2">我是默认内容2</slot>
-    </div>
-      </template>  
+            <div>{{name}}</div>
+            <slot name="slot1">我是默认内容1</slot>
+            <!-- slot占位 -->
+            <slot name="slot2">我是默认内容2</slot>
+        </div>
+    </template>
     <!-- 组件模板写法第二-->
 
 
-<!-- ！！！！！！！！组件模板最外层只能有一个根元素 -->
+    <!-- ！！！！！！！！组件模板最外层只能有一个根元素 -->
 
 
     <script>
-    var v1=new Vue({
-            el:"#div1",
-            data:{},
-            components:{
-                "zujian1":{
-                    template:"#tem",
+        var v1 = new Vue({
+            el: "#div1",
+            data: {},
+            components: {
+                "zujian1": {
+                    template: "#tem",
                     // 组件模板写法三 写在这里
-                    props:["name"]
+                    props: ["name"]
 
                 }
             }
-    })
+        })
     </script>
-    
+
 </body>
+
 </html>

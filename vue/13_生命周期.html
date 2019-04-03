@@ -30,20 +30,20 @@
             },
             // 
             beforeCreate () {
-                console.log(this.$data,this.$el);
+                console.log("beforeCreate"+"               "+this.$data,this.$el);
             },
-        //  vue刚刚被创建 
+        //  vue刚刚被创建 没有属性也没有dom
             created () {
-                console.log(this.$data,this.$el);
+                console.log("reated"+"                      "+this.$data,this.$el);
             },
-            // vue属性已经绑定  dom未生成 el不存在
+            // vue属性已经绑定  dom未生成所以el不存在
         // 
             beforeMount () {
-                console.log(this.$data,this.$el);
+                console.log("beforeMount"+"                  "+this.$data,this.$el);
             },
-        // el已经存在 但是未挂载
+        // el已经存在   属性也已经绑定了 但是未挂载
             mounted() {
-                console.log(this.$el);
+                console.log("mounted"+"                       "+this.$el);
             },
         // 挂载完毕
             beforeUpdate () {
