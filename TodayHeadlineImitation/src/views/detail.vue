@@ -20,10 +20,10 @@
         created () {
             Axios.get("/data/moviedetail.json").then((result)=>{
                this.movieDetail = result.data;
-               console.log(this.movieDetail);
+            
                this.isShow=true;
                }).catch(()=>{
-                console,log('失败了');
+                
             })
         }
     }

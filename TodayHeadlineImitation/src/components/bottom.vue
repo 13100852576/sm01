@@ -22,7 +22,7 @@ export default {
 #div2 {
   width: 100%;
   height: 1rem;
-  background: red;
+  
   position: fixed;
   bottom: 0;
   left: 0;

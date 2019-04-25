@@ -5,20 +5,25 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-      bg:"red",
+      bg:"blue",
       name:'音乐',
       photos:[]
   },
+
+
   mutations: {
     change(state,obj){
         state.bg=obj.bg,
-        state.name=obj.name,
-        console.log(state.bg);
+        state.name=obj.name
+        // console.log(state.bg);
     },
     addphoto(state,photo){
           state.photos=photo
     }
   },
+
+
+
   actions: {
 
   },

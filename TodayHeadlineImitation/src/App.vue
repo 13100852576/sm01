@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <cheader  ></cheader>
+    <cheader></cheader>
     <div id="container">
       <router-view></router-view>
     </div>
-    <bottom :menu="menu" ></bottom>
+    <bottom :menu="menu"></bottom>
   </div>
 </template>
 
 <script>
 import cheader from "@/components/header.vue";
 import bottom from "@/components/bottom.vue";
-import {mapMutations} from 'vuex';
+import { mapMutations } from "vuex";
 export default {
   components: {
     cheader,
@@ -35,28 +35,25 @@ export default {
           name: "图片",
           bg: "#a29989"
         }
-        
-      ],
-      
+      ]
     };
   },
- 
-  methods:mapMutations(["change"]),
-  
+
+  methods: mapMutations(["change"]),
+
   created() {
-    let result=this.menu.filter((obj,index)=>{
-        return    obj.path==this.$route.path;
+    console.log(this.menu);
+    console.log(this.$route.path);
+    let result = this.menu.filter((obj, index) => {
+      return obj.path == this.$route.path;
     });
-    // if(result.length==0){
-    //   this.bg='red';
-    //   this.name='音乐'
-    // }
-     if(result.length){
-        // 修改state中存的name color 改成result[0].name result[0].bgColor
-        this.change(result[0]);
-      }
-  },
-}
+
+    if (result.length) {
+      this.change(result[0]);
+    }
+  }
+  // 让当前页面内容与路径匹配
+};
 </script> 
 
 <style>
@@ -65,13 +62,13 @@ export default {
   margin-bottom: 1rem;
   height: 100%;
 }
-#app{
+#app {
   height: 100%;
 }
-body{
+body {
   height: 100%;
 }
-html{
+html {
   height: 100%;
 }
 </style>
