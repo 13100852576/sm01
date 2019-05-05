@@ -1,4 +1,3 @@
-/*! 唯创 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	function hotDisposeChunk(chunkId) {
 /******/ 		delete installedChunks[chunkId];
@@ -64,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "df267bb3e8f7de7b1792";
+/******/ 	var hotCurrentHash = "5c2c440757c6cee4998f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -259,7 +258,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "xx";
+/******/ 			var chunkId = "entry";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -794,17 +793,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/aaa.scss":
-/*!**********************!*\
-  !*** ./src/aaa.scss ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/aaa.scss?");
-
-/***/ }),
-
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -824,7 +812,18 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _aaa_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./aaa.scss */ \"./src/aaa.scss\");\n/* harmony import */ var _aaa_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_aaa_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar a = 10;\nconsole.log(a);\nvar oDiv1 = document.querySelector(\"#div1\");\noDiv1.innerHTML = \"uuuuuuuuuuuuu;aaaaaaaaaaa\";\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n \n\n// 在js文件中引入css\n\n// 在js文件中引入scss\n\n\nvar a=10;\nlet sunmeng=9999;\nconsole.log(a);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/style.scss":
+/*!************************!*\
+  !*** ./src/style.scss ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/style.scss?");
 
 /***/ })
 

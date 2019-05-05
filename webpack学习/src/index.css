@@ -1,0 +1,12 @@
+html{
+  /* background-image: url("./123.jpeg") ; */
+  /* width: 200px;
+  height:200px; */
+  color:blue;
+  border-radius: 50%;
+  transform: rotate(90deg);
+
+}
+.aa{
+  color:pink;
+}

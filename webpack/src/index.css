@@ -1,9 +1,0 @@
-#div1 {
-    width: 500px;
-    height: 500px;
-    background:url('./img/1.png') 0 0 no-repeat;
-    transform: rotate(30deg);
-    border-radius: 5px;
-
-    
-}

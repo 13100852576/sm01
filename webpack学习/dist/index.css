@@ -1,0 +1,13 @@
+#div1 {
+  background: red;
+}
+
+html {
+  /* background-image: url("./123.jpeg") ; */
+  /* width: 200px;
+  height:200px; */
+  color: blue;
+  border-radius: 50%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
