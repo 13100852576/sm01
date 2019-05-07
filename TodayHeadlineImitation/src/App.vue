@@ -40,7 +40,6 @@ export default {
   },
 
   methods: mapMutations(["change"]),
-
   created() {
     console.log(this.menu);
     console.log(this.$route.path);
