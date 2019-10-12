@@ -542,6 +542,10 @@ text-align: center
     margin-top:-168px;
     background: transparent;
 }
+#next img:hover{
+    width: 43px;
+    height: 43px;
+}
 #time{
     position: relative;
     height: 44px;
