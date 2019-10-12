@@ -132,6 +132,7 @@ opacity:0.3;
                                 <li><p>百货 / 餐厨 / 家庭保健</p><img class="adimg" src="img/分类箭头.png" alt=""></li>
                                 <li><p>成人用品 / 情趣用品</p><img class="adimg" src="img/分类箭头.png" alt=""></li>
                             </ul>
+                        
                             <div class="ad2">
                                     <ul>
                                         <li><p>妈妈 / 宝宝 / 玩具</p><img class="adimg" src="img/分类箭头.png" alt=""></li>
@@ -146,16 +147,16 @@ opacity:0.3;
                                         <li><p>成人用品 / 情趣用品</p><img class="adimg" src="img/分类箭头.png" alt=""></li>
                                     </ul>
                                 </div>
-                        </div>
+                            </div>
                         
                 </div>
                 <div id="shufflingimg">
                         <div id="div1">
-                                <img   style="width:992px;height:360px" src="img/banner@2x.png" class="selected" alt="">
-                                <img   style="width:992px;height:360px" src="img/banner@2x.png" alt="">
-                                <img   style="width:992px;height:360px" src="img/banner@2x.png" alt="">
-                                <img   style="width:992px;height:360px" src="img/banner@2x.png" alt="">
-                                <img   style="width:992px;height:360px" src="img/banner@2x.png" alt="">
+                                <img   style="width:992px;height:360px" src="img/banner备份.jpg"class="selected" alt="">
+                                <img   style="width:992px;height:360px" src="img/banner备份.jpg" alt="">
+                                <img   style="width:992px;height:360px" src="img/banner备份.jpg" alt="">
+                                <img   style="width:992px;height:360px" src="img/banner备份.jpg" alt="">
+                                <img   style="width:992px;height:360px" src="img/banner备份.jpg" alt="">
                                 <ul id="lf-ul">
                                     <img id="left" src="img/bannerleft.png" alt="">
                                     <img id="right" src="img/bannerright.png" alt="">
@@ -182,7 +183,18 @@ opacity:0.3;
                                 var aImg=oDiv.getElementsByTagName('img');
                                 var oLeft=document.getElementById('left');
                                 var oRight=document.getElementById('right');
-                        
+                                oRight.onmousedown=function(){
+                                    oRight.src="img/banner切换-2-2.png"
+                                }
+                                oRight.onmouseup=function(){
+                                    oRight.src="img/bannerright.png"
+                                }
+                                oLeft.onmousedown=function(){
+                                    oLeft.src="img/bannerleft1.png"
+                                }
+                                oLeft.onmouseup=function(){
+                                    oLeft.src="img/bannerleft.png"
+                                }
                                 console.log(aImg)
                                 for(var i=0;i<aNli1.length;i++)
                                 {
@@ -226,6 +238,30 @@ opacity:0.3;
                                     timer1=setInterval(function(){
                                         oRight.onclick();
                                 },1000);
+                                }
+                                var oImg1= document.getElementById('searchimg1');
+                                var oImg2= document.getElementById('searchimg2');
+                                var oImg3= document.getElementById('searchimg3');
+
+                                oImg1.onmouseover=function(){
+                                    oImg1.src="img/Facebook1-2.png"
+                                }
+                                oImg1.onmouseleave=function(){
+                                    oImg1.src="img/Facebook1-1@2x.png"
+                                }
+
+                                oImg2.onmouseover=function(){
+                                    oImg2.src="img/ins-1-2.png"
+                                }
+                                oImg2.onmouseleave=function(){
+                                    oImg2.src="img/ins-1-1@2x.png"
+                                }
+
+                                oImg3.onmouseover=function(){
+                                    oImg3.src="img/抖音1-2.png"
+                                }
+                                oImg3.onmouseleave=function(){
+                                    oImg3.src="img/抖音1-1@2x.png"
                                 }
                                 </script>
                             </div>
@@ -300,7 +336,7 @@ opacity:0.3;
                             <span id="morespan">查看更多</span>
                             <img  id="moreimg" src="img/查看更多.png" alt="">
                     </div>
-                        <div class="sale" id="sale1">
+                        <div class="sale float" id="sale1">
                             <div class="saleshop"></div>
                             <div class="price">¥ 938.4</div>
                             <div class="saleprice">62%折扣</div>
@@ -309,7 +345,7 @@ opacity:0.3;
                             </div>
                             <div class="hassaled">已售64件</div>
                         </div>
-                        <div class="sale">
+                        <div class="sale float">
                             <div class="saleshop"></div>
                             <div class="price">¥ 938.4</div>
                             <div class="saleprice">62%折扣</div>
@@ -318,7 +354,7 @@ opacity:0.3;
                             </div>
                             <div class="hassaled">已售89件</div>
                         </div>
-                        <div class="sale">
+                        <div class="sale float">
                             <div class="saleshop"></div>
                             <div class="price">¥ 938.4</div>
                             <div class="saleprice">35%折扣</div>
@@ -327,7 +363,7 @@ opacity:0.3;
                             </div>
                             <div class="hassaled none">剩余0</div>
                         </div>
-                        <div class="sale">
+                        <div class="sale float">
                             <div class="saleshop"></div>
                             <div class="price">¥ 938.4</div>
                             <div class="saleprice">35%折扣</div>
@@ -336,7 +372,7 @@ opacity:0.3;
                             </div>
                             <div class="hassaled none">剩余0</div>
                         </div>
-                        <div class="sale">
+                        <div class="sale float">
                             <div class="saleshop"></div>
                             <div class="price">¥ 938.4</div>
                             <div class="saleprice">35%折扣</div>
@@ -353,92 +389,92 @@ opacity:0.3;
                                     <span id="morespan">查看更多</span>
                                     <img  id="moreimg" src="img/查看更多.png" alt="">
                         </div>
-                        <div class="brand brand1 brand2" >
+                        <div class="brand brand1 brand2 float" >
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-1@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand2">
+                        <div class="brand brand2 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-2@2x.png" alt="">
                             </div>
                             <img class="saleoff" src="img/标签-1.png" alt="">
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand2">
+                        <div class="brand brand2 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-3@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand2">
+                        <div class="brand brand2 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-4@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand2">
+                        <div class="brand brand2 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-5@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand2">
+                        <div class="brand brand2 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
-                                <img src="img/logo-6@2x.png" alt="">
+                                <img src="img/logo" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand1 brand3">
+                        <div class="brand brand1 brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-7@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand3">
+                        <div class="brand brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-8@2x.png" alt="">
                             </div>
                             <img class="saleoff" src="img/标签-1.png" alt="">
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand3">
+                        <div class="brand brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-9@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand3">
+                        <div class="brand brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-10@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand3">
+                        <div class="brand brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-11@2x.png" alt="">
                             </div>
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
-                        <div class="brand brand3">
+                        <div class="brand brand3 float">
                             <div class="brandContainer"></div>
                             <div class="ellipse">
                                 <img src="img/logo-12@2x.png" alt="">
                             </div>
                             <img class="saleoff" src="img/标签-1.png" alt="">
-                            <span class="pricesmall">¥395.50</span>
+                            <span class="pricesmall"><i>¥395.50</i></span>
                         </div>
 
                 </div>
@@ -449,7 +485,7 @@ opacity:0.3;
                             <span id="morespan">查看更多</span>
                             <img  id="moreimg" src="img/查看更多.png" alt="">
                 </div>
-                <div class="brand brand1 brand2  " >
+                <div class="brand brand1 brand2 float " >
                     <div class="brandContainer">
                             <img  class ="tenten" src="img/标签-2@2x.png" alt="">
                     </div>
@@ -458,46 +494,48 @@ opacity:0.3;
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand2">
+                <div class="brand brand2 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand2">
+                <div class="brand brand2 float">
                     <div class="brandContainer">
-                                <img  class="offleft" src="img/标签-3.png" alt="">
+                                <img  class="offleft" src="img/标签-3@2x.png" alt="">
+                                <span class="offleftspan">31% OFF</span>
                     </div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand2">
+                <div class="brand brand2 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand2">
+                <div class="brand brand2 float">
                     <div class="brandContainer">
-                                    <img  class="offleft" src="img/标签-3.png" alt="">
+                                    <img  class="offleft" src="img/标签-3@2x.png" alt="">
+                                    <span class="offleftspan">31% OFF</span>
                     </div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand2">
+                <div class="brand brand2 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand1 brand3 brand4">
+                <div class="brand brand1 brand3 brand4 float">
                     <div class="brandContainer">
                         <img  class ="tenten" src="img/标签-2@2x.png" alt="">
                     </div>
@@ -506,35 +544,35 @@ opacity:0.3;
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand3 brand4">
+                <div class="brand brand3 brand4 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand3 brand4">
+                <div class="brand brand3 brand4 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand3 brand4">
+                <div class="brand brand3 brand4 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand3 brand4">
+                <div class="brand brand3 brand4 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
                    <span class="heng"><del>¥ 1500.00</del></span>
                     <span class="sales">销量2840</span>  
                 </div>
-                <div class="brand brand3 brand4">
+                <div class="brand brand3 brand4 float">
                     <div class="brandContainer"></div>
                     <span class="nike">耐克NIKE SPORTSWEAR WINDRUNNER TECH…</span>
                     <span class="rmb">¥ 938.4</span>
@@ -570,8 +608,8 @@ opacity:0.3;
                 <span id="adverContainerspan6"><b>新产品</b></span>
                 <span id="adverContainerspan7">三星，苹果，小米，青石，欧莱雅，美宝莲，Enfa，鲍比，好奇，阿迪达斯，卡西欧</span>
                 <span id="adverContainerspan8"><b>特色产品</b></span>
-                <span id="adverContainerspan9"><b>手机和平板电脑</b></br>诺基亚， 三星， 索尼， 黑莓， 华硕， HTC， Oppo， 联想， 阿尔卡特， iPhone 4s， iPhone 5s， iPhone 6， Apple iPhone 6s， iPad， 三星平板电脑， 宏cer平板电脑， 联想平板电脑 电脑和笔记本电脑 戴尔笔记本电脑， 笔记本电脑华硕， 笔记本电脑的MacBook， 笔记本电脑索尼， 联想， 宏碁笔记本电池 </br><b>电视台</b></br>索尼电视， 电视LG， 电视东芝， 电视三星， 电视松下， 电视夏普， 液晶电视， 电视三星液晶， LG液晶电视， 电视夏普LCD， LED电视， 电视索尼LED， 电视三星LED ... </br><b>冰箱</b></br>迷你冰箱， 三洋空调， 冰箱伊莱克斯， 冰箱松下， 冰箱东芝， 冰箱三星 ... </br><b>健康与美容</b></br>Bourjois， L'oreal， 美体小铺， Maybeline， 资生堂 ...</span>
-                <span id="adverContainerspan10">摄影机 佳能， 尼康， 索尼摄像机， 相机富士， superzoom， 单反相机， 摄像机 ...... 摄影机 佳能， 尼康， 索尼， 富士， 桥相机， 数码单反相机套装， 视频和行动摄像机 ... 洗衣机 伊莱克斯洗衣机， 洗衣机三洋， 洗衣机东芝， 三洋洗衣机， 洗衣机日立， 洗衣机松下， 洗衣机三星， 洗衣机LG ... 微波炉 夏普微波炉， 微波炉伊莱克斯， 微波炉青石， 微波炉三星， 微波炉三洋， 微波炉金太阳， 微波炉，松下 ... 汽车，摩托车和配件 本田， 雅马哈摩托车， 摩托车比亚乔， 电影真正的3M绝缘 ...</span>
+                <span id="adverContainerspan9">手机和平板电脑</br>诺基亚， 三星， 索尼， 黑莓， 华硕， HTC， Oppo， 联想， 阿尔卡特， iPhone 4s， iPhone 5s， iPhone 6， Apple iPhone 6s， iPad， 三星平板电脑， 宏cer平板电脑， 联想平板电脑 电脑和笔记本电脑 戴尔笔记本电脑， 笔记本电脑华硕， 笔记本电脑的MacBook， 笔记本电脑索尼， 联想， 宏碁笔记本电池 </br>电视台</br>索尼电视， 电视LG， 电视东芝， 电视三星， 电视松下， 电视夏普， 液晶电视， 电视三星液晶， LG液晶电视， 电视夏普LCD， LED电视， 电视索尼LED， 电视三星LED ... </br>冰箱</br>迷你冰箱， 三洋空调， 冰箱伊莱克斯， 冰箱松下， 冰箱东芝， 冰箱三星 ... </br>健康与美容</br>Bourjois， L'oreal， 美体小铺， Maybeline， 资生堂 ...</span>
+                <span id="adverContainerspan10">摄影机 </br>佳能， 尼康， 索尼摄像机， 相机富士， superzoom， 单反相机， 摄像机 ...... </br>摄影机</br> 佳能， 尼康， 索尼， 富士， 桥相机， 数码单反相机套装， 视频和行动摄像机 ... </br>洗衣机 </br>伊莱克斯洗衣机， 洗衣机三洋， 洗衣机东芝， 三洋洗衣机， 洗衣机日立， 洗衣机松下， 洗衣机三星， 洗衣机LG ... </br>微波炉</br> 夏普微波炉， 微波炉伊莱克斯， 微波炉青石， 微波炉三星， 微波炉三洋， 微波炉金太阳， 微波炉，松下 ... </br>汽车，摩托车和配件 本田</br>， 雅马哈摩托车， 摩托车比亚乔， 电影真正的3M绝缘 ...</span>
             </div>
             </div>
             <div id="connect">

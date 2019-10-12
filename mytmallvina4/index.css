@@ -311,6 +311,7 @@ text-align: center
     z-index: 100;
 }
 #ad{
+    font-size: 12px;
     z-index:100;
     float: left;
     width: 200px;
@@ -336,6 +337,7 @@ text-align: center
     background: white;
     margin-left:8px;
 }
+
 #ad li:hover{
     background: #ECEFF1;
     color:#F7432E;
@@ -395,6 +397,9 @@ text-align: center
     background:  #ECEFF1;
     display: inline-block;
 }
+.ad1:hover .ad2{
+    display: block !important;
+}
 
 .ad1 img{
     margin-left:186px;
@@ -429,7 +434,7 @@ text-align: center
     background: white;
     margin-left:8px;
 }
-.ad2 li:hover{
+/* .ad2 li:hover{
     background: #ECEFF1;
     color:#F7432E;
 }
@@ -440,8 +445,18 @@ text-align: center
 .ad2 li:hover .adimg{
     background:  #ECEFF1;
     display: inline-block;
+} */
+.ad2:hover .adimg{
+    display: none !important;
 }
-
+.ad2 li:hover >p{
+    background: white !important;
+    color:  #757575 !important;
+}
+.ad2 li:hover {
+    background: white !important;
+    /* color: white !important; */
+}
 .ad2 img{
     margin-left:186px;
     margin-top:-22px;
@@ -515,7 +530,7 @@ text-align: center
 #alltype span{
     text-align: center;
     font-size:11.5px;
-    width: 56px;
+    width: 58px;
     margin-top:13px;
     margin-left:35px;
     background: white;
@@ -568,11 +583,13 @@ text-align: center
     margin:0 4px 0px 4px;
     width:18px;
     height:17px;
-    font-size:17px;
-    font-family:Arial-BoldMT,Arial;
-    font-weight:normal;
+    font-size:16px;
+    /* font-family:Arial-BoldMT,Arial; */
+    font-weight:350;
+    /* font-weight: 40px; */
     color:rgba(255,255,255,1);
     line-height:18px;
+    margin-left:4px;
 }
 .small{
     display: block;
@@ -581,9 +598,9 @@ text-align: center
     text-align: center;
     height:7px;
     font-size:7px;
-    font-family:Arial-BoldMT,Arial;
+    /* font-family:Arial-BoldMT,Arial; */
     /* margin-top:3px; */
-    /* font-weight:normal; */
+    font-weight:normal;
     color:rgba(255,255,255,1);
     /* line-height:7px; */
     margin-top:0px;
@@ -676,7 +693,7 @@ text-align: center
     color:rgba(156,156,156,1);
     line-height:17px;
     margin-left:1px;
-    margin-top:13px;
+    margin-top:5px;
 }
 #saleprocessin2{
     width:105px;
@@ -695,7 +712,7 @@ text-align: center
 }
 .brand{
     width: 186px;
-    height: 222px;
+    height: 227px;
     background: white;
     float: left;
     margin-left:10px;
@@ -761,8 +778,9 @@ margin-top:-224px;
 .nike{
 background: white;
 display: block;
-width:187px;
-height:40px;
+/* width:187px; */
+/* height:40px; */
+margin-left:10px;
 font-size:14px;
 overflow: hidden;
 margin-top:10px;
@@ -772,8 +790,12 @@ text-overflow: ellipsis;
 /* font-weight:500; */
 color:rgba(0,0,0,1);
 /* line-height:20px; */
+font-size:14px;
+font-family:PingFangSC-Medium,PingFangSC;
+font-weight:500;
 }
 .rmb{
+    margin-left: 10px;
 margin-top:7px;
 display: block;
 width:100px;
@@ -784,6 +806,9 @@ font-weight:500;
 color:rgba(247,67,46,1);
 line-height:22px;
 background: white;
+font-size:16px;
+font-family:PingFangSC-Medium,PingFangSC;
+font-weight:500;
 }
 .heng{
 margin-top:1px;
@@ -795,17 +820,19 @@ font-family:PingFangSC-Medium,PingFangSC;
 font-weight:500;
 color:rgba(156,156,156,1);
 line-height:17px;
-margin-left: 3px;
+margin-left: 13px;
 margin-top:4px;
 background: white;
+
+font-size:12px;
+font-family:PingFangSC-Medium,PingFangSC;
+font-weight:500;
 }
 .heng del{
     background: white;
 }
 .sales{
 display: block;
-width:80px;
-height:17px;
 font-size:12px;
 font-family:PingFangSC-Regular,PingFangSC;
 font-weight:400;
@@ -816,6 +843,9 @@ text-stroke:1px rgba(151,151,151,1);
 margin-left: 116px;
 margin-top: -17px;
 background: white;
+font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 
 .brand4{
@@ -910,6 +940,10 @@ margin-top:22px;
     color:rgba(96,96,96,1);
     line-height:34px;
     margin-top:56px;
+
+    font-size:16px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan2{
     display: inline-block;
@@ -922,6 +956,10 @@ color:rgba(138,138,138,1);
 line-height:30px;
 margin-left:-280px;
 margin-top:104px;
+
+font-size:12px;
+font-family:PingFangSC-Medium,PingFangSC;
+font-weight:500;
 }
 #adverContainerspan3{
     width: 280px;
@@ -933,6 +971,10 @@ color:rgba(138,138,138,1);
 line-height: 30px;
 margin-left:-280px;
 margin-top: 377px;
+
+font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan4{
     width:280px;
@@ -945,6 +987,10 @@ line-height:28px;
 background: RGBA(245, 245, 245, 1);
 margin-left:40px;
 margin-top:56px;
+
+font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan5{
     width:280px;
@@ -957,6 +1003,10 @@ margin-top:56px;
     background: RGBA(245, 245, 245, 1);
     margin-left:-280px;
     margin-top:314px;
+
+    font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 a{
     color:#F7432E;
@@ -972,6 +1022,10 @@ a{
     background: RGBA(245, 245, 245, 1);
     margin-left:-280px;
     margin-top:390px;
+
+    font-size:16px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan7{
     width:280px;
@@ -983,6 +1037,14 @@ a{
     background: RGBA(245, 245, 245, 1);
     margin-left:-280px;
     margin-top:420px;
+
+    font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
+
+font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan8{
     width: 72px;
@@ -995,6 +1057,9 @@ a{
     background: RGBA(245, 245, 245, 1);
     margin-left:40px;
     margin-top:56px;
+    font-size:16px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
 }
 #adverContainerspan9{
     width:280px;
@@ -1002,10 +1067,15 @@ a{
     font-family:PingFangSC-Regular,PingFangSC;
     font-weight:400;
     color:rgba(138,138,138,1);
-    line-height:23px;
+    line-height:22px;
     background: RGBA(245, 245, 245, 1);
     margin-left:-73px;
     margin-top:86px;
+
+    font-size:12px;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
+letter-spacing: -1px;
 }
 #adverContainerspan10{
     display: block;
@@ -1014,10 +1084,11 @@ a{
     font-family:PingFangSC-Regular,PingFangSC;
     font-weight:400;
     color:rgba(138,138,138,1);
-    line-height:23px;
+    line-height:22px;
     background: RGBA(245, 245, 245, 1);
     margin-left:40px;
     margin-top:56px;
+    letter-spacing: -1px;
 }
 #connectContainerspan1{
     width:118px;
@@ -1080,4 +1151,32 @@ line-height:20px;
 .ellipse img{
     width: 110px;
     height: 40px;
+}
+.float:hover{
+    box-shadow: 0 0 5px 1px rgba(96,96,96,1);
+}
+#contents4 .brand{
+    height: 263px;
+    /* background: black; */
+}
+.brand3{
+    margin-top:23px;
+}
+i{
+    background: transparent;
+}
+.offleftspan{
+    width:66px;
+height:20px;
+font-size:14px;
+font-family:PingFangSC-Medium,PingFangSC;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:20px;
+margin-left:-75px;
+background: transparent;
+}
+.offleft{
+    width: 90px;
+    height: 24px;
 }
