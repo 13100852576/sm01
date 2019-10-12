@@ -637,7 +637,7 @@ text-align: center
     font-weight:400;
     color:rgba(4,4,4,1);
     line-height:20px;
-    margin-left:12px;
+    margin-left:1px;
     margin-top:6px;
 }
 .saleprice{
@@ -675,8 +675,8 @@ text-align: center
     font-weight:400;
     color:rgba(156,156,156,1);
     line-height:17px;
-    margin-left:12px;
-    margin-top:3px;
+    margin-left:1px;
+    margin-top:13px;
 }
 #saleprocessin2{
     width:105px;
@@ -790,12 +790,12 @@ margin-top:1px;
 display: block;
 width:100px;
 height:17px;
-font-size:17px;
+font-size:12px;
 font-family:PingFangSC-Medium,PingFangSC;
 font-weight:500;
 color:rgba(156,156,156,1);
 line-height:17px;
-margin-left: 1px;
+margin-left: 3px;
 margin-top:4px;
 background: white;
 }
@@ -804,9 +804,9 @@ background: white;
 }
 .sales{
 display: block;
-width:100px;
+width:80px;
 height:17px;
-font-size:17px;
+font-size:12px;
 font-family:PingFangSC-Regular,PingFangSC;
 font-weight:400;
 color:rgba(156,156,156,1);
